@@ -63,7 +63,81 @@
       ]
    }
 
-   ,"Work": {}
+   ,"Work": {
+      "mainTitle": "Featured",
+      "paragraphs": [
+        {
+          "title": "FOOD·E",
+          "smallText":
+            "Released in May 2020, FOOD·E determines the environmental impact of a single meal, given a list of its ingredients. Built with Next.js and MongoDB.",
+          "links": [
+            {
+              "linkText": "foodprintcalculator.com",
+              "url": "https://foodprintcalculator.com/"
+            }
+          ],
+          "image": {
+            "img": "window.innerWidth < 600 ? 'mobile-food-e.png' : 'food-e.png'",
+            "name": "food·e"
+          }
+        },
+        {
+          "title": "Ethicode.org",
+          "smallText":
+            "The Ethicode homepage (this website) was released in March 2020. Built with Vue.js.",
+          "links": [
+            {
+              "linkText": "ethicode.org",
+              "url": "http://ethicode.org"
+            }
+          ],
+          "image": {
+            "img": "window.innerWidth < 600 ? 'mobile-ethicodeorg.png' : 'ethicodeorg.png'",
+            "name": "ethicode"
+          }
+        },
+        {
+          "title": "VeganBot",
+          "smallText":
+            "VeganBot provides answers to frequently asked questions about veganism, as well as counter arguments for common justifications for animal abuse. The aim is to educate and train people in the vegan conversation, so that veganism can spread even faster. Released in May 2018, the client was built with TypeScript/Angular.js, the server with Node.js and then some Python scripts to gather the content.",
+          "links": [
+            {
+              "linkText": "veganbot.com",
+              "url": "http://veganbot.com"
+            }
+          ],
+          "image": {
+            "img": "window.innerWidth < 600 ? 'mobile-veganbotpic.png' : 'veganbotpic.png'",
+            "name": "veganbot"
+          }
+        }
+      ]
+   }
 
-   ,"Contact": {}
+   ,"Contact": {
+      "mainTitle": "Get in touch",
+      "paragraphs": [
+        {
+          "text":
+            "Now is the time to build something new. Drop us a line if you have a brilliant idea that needs to be implemented and shared with the world."
+        },
+        {
+          "text":
+            "If you want to join Ethicode or contribute in any way, we are always looking for purposeful people to collaborate with. Feel free to send in your resume. Skills and experience are important but Ethicode is most interested in your passions. What makes you tick? What inspires you?"
+        },
+        {
+          "text": "Email: ",
+          "email": "ethicode@ethicode.org"
+        },
+        {
+          "text": "Instagram: ",
+          "links": [
+            {
+              "linkText": "instagram.com/ethicodeorg",
+              "url": "https://www.instagram.com/ethicodeorg/"
+            }
+          ]
+        }
+      ]
+   }
 }
