@@ -5,52 +5,63 @@
          {
             "html_tag": "H2",
             "display": [
-               [{
-                  "position": 1
-               }, "For a world", "pink"]
+               ["For a world", "pink"]
             ]
          }
          ,{
             "html_tag": "H3",
             "display": [
-               [{
-                     "position": 1
-               }, "Where all", ""],
-               [{
-                     "position": 2
-               }, "sentient beings", "yellow"]
+               [ "Where all", ""],
+               [ "sentient beings", "yellow"]
             ]
          }
          ,{
             "html_tag": "H4",
             "display": [
-               [{
-                  "position": 1
-               }, "have the right to", ""],
-               [{
-                  "position": 2
-               }, "life", "blue"],
-               [{
-                  "position": 3
-               }, ",", ""],
-               [{
-                  "position": 4
-               }, "liberty", "blue"],
-               [{
-                  "position": 5
-               }, "and the", ""],
-               [{
-                  "position": 6
-               }, "pursuit of happiness", "blue"],
-               [{
-                  "position": 8
-               }, ".", ""]
+               ["have the right to", ""],
+               ["life", "blue"],
+               [",", ""],
+               ["liberty", "blue"],
+               ["and the", ""],
+               ["pursuit of happiness", "blue"],
+               [".", ""]
             ]
          }
       ]
    } 
 
-   ,"About": {}
+   ,"About": {
+      "mainTitle": "",
+      "paragraphs": [
+        {
+          "title": "Why",
+          "text":
+            "All animals are created equal. Ethicode's mission is to inspire equity for them all."
+        },
+        {
+          "title": "How",
+          "text":
+            "By innovating and building software to educate, raise awareness, and promote fairness towards all animal species."
+        },
+        {
+          "title": "Who",
+          "text": "Currently, it's just me..",
+          "image": {
+            "img": "tveir_i_sjotta.jpg",
+            "name": "atli"
+          },
+          "about": "Atli Sævar, CVO and founder"
+        },
+        {
+          "title": "What now",
+          "text": "..but Ethicode is looking to expand!",
+          "route": {
+            "text": "Get in touch",
+            "route": "/contact"
+          }
+        }
+      ]
+   }
 
    ,"Work": {}
 
