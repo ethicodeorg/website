@@ -1,0 +1,58 @@
+{
+   "Ethicode": {
+
+      "content": [
+         {
+            "html_tag": "H2",
+            "display": [
+               [{
+                  "position": 1
+               }, "For a world", "pink"]
+            ]
+         }
+         ,{
+            "html_tag": "H3",
+            "display": [
+               [{
+                     "position": 1
+               }, "Where all", ""],
+               [{
+                     "position": 2
+               }, "sentient beings", "yellow"]
+            ]
+         }
+         ,{
+            "html_tag": "H4",
+            "display": [
+               [{
+                  "position": 1
+               }, "have the right to", ""],
+               [{
+                  "position": 2
+               }, "life", "blue"],
+               [{
+                  "position": 3
+               }, ",", ""],
+               [{
+                  "position": 4
+               }, "liberty", "blue"],
+               [{
+                  "position": 5
+               }, "and the", ""],
+               [{
+                  "position": 6
+               }, "pursuit of happiness", "blue"],
+               [{
+                  "position": 8
+               }, ".", ""]
+            ]
+         }
+      ]
+   } 
+
+   ,"About": {}
+
+   ,"Work": {}
+
+   ,"Contact": {}
+}
