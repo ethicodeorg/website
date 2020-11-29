@@ -1,10 +1,26 @@
+import content from '../public/content.json'
+const contactContent = content.Contact
+
 const Contact = () => {
 
+    let contactContentString = '';
+
+    contactContent.paragraphs.forEach(paragraph => {
+        contactContentString = contactContentString + `<p>${paragraph.text}</p>`
+    })
+    
     return (
         <section id="contact">
-            <h2 class="main-title">Contact</h2>
+            <h2 className="main-title">{contactContent.mainTitle}</h2>
 
-            <style>{`
+            <div dangerouslySetInnerHTML={{__html: contactContentString}}></div>
+
+            {/* {contactContent.paragraphs.forEach(paragraph => {
+                console.log(`<p>${paragraph.text}</p>`)
+                return(`<p>${paragraph.text}</p>`)
+            })} */}
+
+            <style jsx scoped>{`
                 .main-title {
                     max-width: 1200px;
                     padding-top: 100px;
@@ -12,8 +28,7 @@ const Contact = () => {
                     font-size: 36px;
                     text-align: left;
                     line-height: 50px;
-                    /* color: #222; */
-                    color: #fff;
+                    color: #222;
                     -webkit-animation: fadeInBottom 1s;
                     animation: fadeInBottom 1s;
                 }

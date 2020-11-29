@@ -1,10 +1,21 @@
+import content from '../public/content.json'
+const aboutContent = content.About
+
 const About = () => {
+
+    let aboutContentString = '';
+
+    aboutContent.paragraphs.forEach(paragraph => {
+        aboutContentString = aboutContentString + `<p>${paragraph.text}</p>`
+    })
     
     return (
 		<section id="about">
-			<h2 class="main-title">About</h2>
+			<h2 className="main-title">{aboutContent.mainTitle}</h2>
 
-			<style>{`
+            <div dangerouslySetInnerHTML={{__html: aboutContentString}}></div>
+
+			<style jsx scoped>{`
                 .main-title {
                     max-width: 1200px;
                     padding-top: 100px;

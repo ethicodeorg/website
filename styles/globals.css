@@ -40,7 +40,7 @@ a {
 }
 .bkgr {
   position: fixed;
-  background-image: url('/assets/tveir_i_sjotta.jpg');
+  background-image: url('../public/assets/tveir_i_sjotta.jpg');
   opacity: 0.3;
   height: 100%;
   width: 100%;
@@ -90,6 +90,7 @@ a {
 .menu-item-active {
   color: #f0006d;
   transition: color 0.2s ease-in-out;
+  text-decoration: none;
 }
 .home {
   position: fixed;
@@ -256,5 +257,386 @@ a {
 @media screen and (min-width: 1000px) {
   .menu-item {
     font-size: 21px;
+  }
+}
+
+/* for ethicode page */
+.vision {
+  height: 100vh;
+  padding: 0 20px;
+}
+.for-world {
+  padding-top: 33vh;
+}
+.for-world,
+.where-sentient {
+  max-width: 1200px;
+  margin: 0 auto;
+  font-size: 48px;
+  text-align: left;
+  line-height: 48px;
+  color: #eee;
+  font-style: italic;
+  -webkit-animation: fadeInBottom 1s;
+  animation: fadeInBottom 1s;
+}
+.where-sentient {
+  font-size: 32px;
+  line-height: 32px;
+}
+.the-right {
+  max-width: 1200px;
+  padding-top: 5px;
+  margin: 0 auto;
+  color: #eee;
+  font-size: 18px;
+  text-align: left;
+  font-style: italic;
+  line-height: 24px;
+  -webkit-animation: fadeInBottom 1.5s;
+  animation: fadeInBottom 1.5s;
+}
+.pink {
+  color: #f0006d;
+}
+.yellow {
+  color: #ffd300;
+}
+.blue {
+  color: #00bad4;
+}
+
+@media screen and (min-width: 450px) {
+  .for-world {
+    font-size: 72px;
+    line-height: 60px;
+  }
+  .where-sentient {
+    font-size: 48px;
+    line-height: 48px;
+  }
+  .the-right {
+    font-size: 24px;
+    line-height: 28px;
+  }
+}
+
+@media screen and (min-width: 800px) {
+  .vision {
+    padding: 0 45px;
+  }
+  .for-world {
+    font-size: 112px;
+    line-height: 104px;
+  }
+  .where-sentient {
+    font-size: 56px;
+    line-height: 56px;
+  }
+  .the-right {
+    font-size: 30px;
+    line-height: 34px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .for-world {
+    font-size: 172px;
+    line-height: 156px;
+  }
+  .where-sentient {
+    font-size: 80px;
+    line-height: 80px;
+  }
+  .the-right {
+    font-size: 40px;
+    line-height: 44px;
+    padding-top: 10px;
+  }
+}
+
+/* copied in from FrontPage.vue */
+.front-page {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: left;
+  padding: 50px 0;
+}
+.paragraph {
+  margin: 0 auto 20px;
+  width: 555px;
+}
+.paragraph:nth-child(2n) {
+  padding-top: 50px;
+}
+.paragraph-contact {
+  margin-bottom: 0;
+}
+.paragraph-title {
+  display: block;
+  font-size: 32px;
+  margin: 0;
+  padding: 30px 0 20px;
+  color: #f0006d;
+  -webkit-animation: fadeInBottom 0.5s;
+  animation: fadeInBottom 0.5s;
+  font-style: italic;
+}
+.paragraph-title-why {
+  display: inline-block;
+  -webkit-transform: rotate(60deg);
+  transform: rotate(60deg);
+}
+.paragraph-title-how {
+  display: inline-block;
+  -webkit-transform: rotate(300deg);
+  transform: rotate(300deg);
+}
+.paragraph-title-who {
+  display: inline-block;
+  -webkit-transform: rotate(120deg);
+  transform: rotate(120deg);
+}
+.paragraph-title-what {
+  display: inline-block;
+  -webkit-transform: rotate(200deg);
+  transform: rotate(200deg);
+}
+.paragraph-about {
+  padding: 0;
+  color: #ffd300;
+  font-size: 24px;
+  font-style: italic;
+  -webkit-animation: fadeInBottom 0.5s;
+  animation: fadeInBottom 0.5s;
+}
+.paragraph-text {
+  padding: 0;
+  color: #eee;
+  font-size: 24px;
+  -webkit-animation: fadeInBottom 0.7s;
+  animation: fadeInBottom 0.7s;
+}
+.paragraph-small-text {
+  display: inline-block;
+  padding: 0;
+  color: #222;
+  font-size: 18px;
+  -webkit-animation: fadeInBottom 0.7s;
+  animation: fadeInBottom 0.7s;
+}
+.paragraph-text-contact {
+  display: inline-block;
+  margin-right: 20px;
+  color: #222;
+}
+.paragraph-link {
+  display: block;
+  padding: 10px 0;
+  margin-right: 40px;
+  text-decoration: none;
+  color: #00bad4;
+  font-size: 21px;
+  -webkit-animation: fadeInBottom 0.7s;
+  animation: fadeInBottom 0.7s;
+}
+.paragraph-link:hover {
+  opacity: 0.7;
+}
+.picture {
+  display: block;
+  padding: 0;
+  width: 100%;
+  -webkit-animation: fadeInBottom 0.7s;
+  animation: fadeInBottom 0.7s;
+}
+
+@media screen and (min-width: 800px) {
+  .paragraph {
+    margin: 0 auto 20px;
+  }
+  .paragraph-contact {
+    margin-bottom: 0;
+  }
+  .paragraph-title {
+    padding: 60px 0 20px;
+    font-size: 48px;
+  }
+  .paragraph-title-why,
+  .paragraph-title-how {
+    padding: 0;
+  }
+  .paragraph-about {
+    padding: 0;
+  }
+  .paragraph-text {
+    padding: 0;
+    font-size: 32px;
+  }
+  .paragraph-small-text {
+    padding: 0;
+    font-size: 24px;
+  }
+  .paragraph-link {
+    display: inline-block;
+    padding: 30px 0;
+    font-size: 24px;
+  }
+  .picture {
+    padding: 0;
+    width: 100%;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .paragraph {
+    margin: 0 0 80px;
+  }
+  .paragraph-contact {
+    margin-bottom: 0;
+  }
+}.front-page {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: left;
+  padding: 50px 0;
+}
+.paragraph {
+  margin: 0 auto 20px;
+  width: 555px;
+}
+.paragraph:nth-child(2n) {
+  padding-top: 50px;
+}
+.paragraph-contact {
+  margin-bottom: 0;
+}
+.paragraph-title {
+  display: block;
+  font-size: 32px;
+  margin: 0;
+  padding: 30px 0 20px;
+  color: #f0006d;
+  -webkit-animation: fadeInBottom 0.5s;
+  animation: fadeInBottom 0.5s;
+  font-style: italic;
+}
+.paragraph-title-why {
+  display: inline-block;
+  -webkit-transform: rotate(60deg);
+  transform: rotate(60deg);
+}
+.paragraph-title-how {
+  display: inline-block;
+  -webkit-transform: rotate(300deg);
+  transform: rotate(300deg);
+}
+.paragraph-title-who {
+  display: inline-block;
+  -webkit-transform: rotate(120deg);
+  transform: rotate(120deg);
+}
+.paragraph-title-what {
+  display: inline-block;
+  -webkit-transform: rotate(200deg);
+  transform: rotate(200deg);
+}
+.paragraph-about {
+  padding: 0;
+  color: #ffd300;
+  font-size: 24px;
+  font-style: italic;
+  -webkit-animation: fadeInBottom 0.5s;
+  animation: fadeInBottom 0.5s;
+}
+.paragraph-text {
+  padding: 0;
+  color: #eee;
+  font-size: 24px;
+  -webkit-animation: fadeInBottom 0.7s;
+  animation: fadeInBottom 0.7s;
+}
+.paragraph-small-text {
+  display: inline-block;
+  padding: 0;
+  color: #222;
+  font-size: 18px;
+  -webkit-animation: fadeInBottom 0.7s;
+  animation: fadeInBottom 0.7s;
+}
+.paragraph-text-contact {
+  display: inline-block;
+  margin-right: 20px;
+  color: #222;
+}
+.paragraph-link {
+  display: block;
+  padding: 10px 0;
+  margin-right: 40px;
+  text-decoration: none;
+  color: #00bad4;
+  font-size: 21px;
+  -webkit-animation: fadeInBottom 0.7s;
+  animation: fadeInBottom 0.7s;
+}
+.paragraph-link:hover {
+  opacity: 0.7;
+}
+.picture {
+  display: block;
+  padding: 0;
+  width: 100%;
+  -webkit-animation: fadeInBottom 0.7s;
+  animation: fadeInBottom 0.7s;
+}
+
+@media screen and (min-width: 800px) {
+  .paragraph {
+    margin: 0 auto 20px;
+  }
+  .paragraph-contact {
+    margin-bottom: 0;
+  }
+  .paragraph-title {
+    padding: 60px 0 20px;
+    font-size: 48px;
+  }
+  .paragraph-title-why,
+  .paragraph-title-how {
+    padding: 0;
+  }
+  .paragraph-about {
+    padding: 0;
+  }
+  .paragraph-text {
+    padding: 0;
+    font-size: 32px;
+  }
+  .paragraph-small-text {
+    padding: 0;
+    font-size: 24px;
+  }
+  .paragraph-link {
+    display: inline-block;
+    padding: 30px 0;
+    font-size: 24px;
+  }
+  .picture {
+    padding: 0;
+    width: 100%;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .paragraph {
+    margin: 0 0 80px;
+  }
+  .paragraph-contact {
+    margin-bottom: 0;
   }
 }

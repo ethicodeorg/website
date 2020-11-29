@@ -1,15 +1,12 @@
 import '../styles/globals.css'
-import Header from '../components/Header';
+import Layout from "../components/MyLayout";
 
-function MyApp({ Component, pageProps }) {
+function EthicodeApp({ Component, pageProps }) {
   return (
-          <div id="app" className="frontground">
-            <Header />
-            <div className="page-container">
+          <Layout>
               <Component {...pageProps} />
-            </div>
-          </div>
+          </Layout>
         )
 }
 
-export default MyApp
+export default EthicodeApp
