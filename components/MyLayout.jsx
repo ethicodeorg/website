@@ -26,7 +26,7 @@ export default function Layout({ children, title = 'Ethicode', ...props }) {
       </Head>
 
       <div id="app" className="frontground">
-        <Header />
+        <Header currentPage={children.type.name} />
         {children}
 
         <style jsx global>
