@@ -7,7 +7,11 @@ const About = () => {
   aboutContent.paragraphs.forEach((paragraph) => {
     aboutContentString =
       aboutContentString +
-      `<h3 class="paragraph-title paragraph-title-rotate${paragraph.titleRotate}">${paragraph.title}</h3><p>${paragraph.text}</p>`;
+      `<div class="paragraph"><h3 class="paragraph-title paragraph-title-rotate${paragraph.titleRotate}">${paragraph.title}</h3><p class="paragraph-text">${paragraph.text}</p><style>p {display: block;
+          margin-block-start: 1em;
+          margin-block-end: 1em;
+          margin-inline-start: 0px;
+          margin-inline-end: 0px;}</style></div>`;
   });
 
   return (
