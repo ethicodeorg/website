@@ -8,7 +8,7 @@ const Ethicode = () => {
   displayItems.forEach((item) => {
     visionContent =
       visionContent +
-      `<${item.html_tag}>` +
+      `<${item.html_tag} class="visionContent">` +
       item.display.map((item) => {
         if (item[1].length) {
           return `<span class="${item[1]}">${item[0]}</span>`;

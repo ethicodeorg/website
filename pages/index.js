@@ -1,3 +1,4 @@
+import { Fragment } from 'react';
 // import the various components of the page
 import About from '../components/About';
 import Contact from '../components/Contact';
@@ -6,11 +7,9 @@ import Work from '../components/Work';
 
 export default function Index() {
   return (
-    <div>
+    <Fragment>
       <div className="ethicode">
-        <div className="vision">
-          <Ethicode />
-        </div>
+        <Ethicode />
       </div>
       <div className="page-container page-container-dark">
         <About />
@@ -22,6 +21,6 @@ export default function Index() {
         <Contact />
         <br />
       </div>
-    </div>
+    </Fragment>
   );
 }
