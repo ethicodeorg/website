@@ -8,7 +8,7 @@
       {
         "html_tag": "H3",
         "display": [
-          ["Where all ", "white"],
+          ["where all ", "white"],
           ["sentient beings", "yellow"]
         ]
       },
@@ -17,7 +17,7 @@
         "display": [
           ["have the right to ", "white"],
           ["life", "blue"],
-          [",", "white"],
+          [", ", "white"],
           ["liberty ", "blue"],
           ["and the ", "white"],
           ["pursuit of happiness", "blue"],
