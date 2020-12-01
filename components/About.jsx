@@ -5,14 +5,16 @@ const About = () => {
   let aboutContentString = '';
 
   aboutContent.paragraphs.forEach((paragraph) => {
-    aboutContentString = aboutContentString + `<p>${paragraph.text}</p>`;
+    aboutContentString =
+      aboutContentString +
+      `<h3 class="paragraph-title paragraph-title-rotate${paragraph.titleRotate}">${paragraph.title}</h3><p>${paragraph.text}</p>`;
   });
 
   return (
     <section id="about">
       <h2 className="main-title">{aboutContent.mainTitle}</h2>
 
-      <div dangerouslySetInnerHTML={{ __html: aboutContentString }}></div>
+      <div className="front-page" dangerouslySetInnerHTML={{ __html: aboutContentString }}></div>
 
       <style jsx scoped>{`
         .main-title {

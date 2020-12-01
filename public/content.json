@@ -32,14 +32,17 @@
     "paragraphs": [
       {
         "title": "Why",
+        "titleRotate": "60",
         "text": "All animals are created equal. Ethicode's mission is to inspire equity for them all."
       },
       {
         "title": "How",
+        "titleRotate": "300",
         "text": "By innovating and building software to educate, raise awareness, and promote fairness towards all animal species."
       },
       {
         "title": "Who",
+        "titleRotate": "120",
         "text": "Currently, it's just me..",
         "image": {
           "img": "tveir_i_sjotta.jpg",
@@ -49,6 +52,7 @@
       },
       {
         "title": "What now",
+        "titleRotate": "200",
         "text": "..but Ethicode is looking to expand!",
         "route": {
           "text": "Get in touch",

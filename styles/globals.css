@@ -392,22 +392,22 @@ H4.visionContent {
   animation: fadeInBottom 0.5s;
   font-style: italic;
 }
-.paragraph-title-why {
+.paragraph-title-rotate60 {
   display: inline-block;
   -webkit-transform: rotate(60deg);
   transform: rotate(60deg);
 }
-.paragraph-title-how {
+.paragraph-title-rotate300 {
   display: inline-block;
   -webkit-transform: rotate(300deg);
   transform: rotate(300deg);
 }
-.paragraph-title-who {
+.paragraph-title-rotate120 {
   display: inline-block;
   -webkit-transform: rotate(120deg);
   transform: rotate(120deg);
 }
-.paragraph-title-what {
+.paragraph-title-rotate200 {
   display: inline-block;
   -webkit-transform: rotate(200deg);
   transform: rotate(200deg);
