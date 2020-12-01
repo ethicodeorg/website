@@ -8,18 +8,18 @@
       {
         "html_tag": "H3",
         "display": [
-          ["Where all", "white"],
+          ["Where all ", "white"],
           ["sentient beings", "yellow"]
         ]
       },
       {
         "html_tag": "H4",
         "display": [
-          ["have the right to", "white"],
+          ["have the right to ", "white"],
           ["life", "blue"],
           [",", "white"],
-          ["liberty", "blue"],
-          ["and the", "white"],
+          ["liberty ", "blue"],
+          ["and the ", "white"],
           ["pursuit of happiness", "blue"],
           [".", "white"]
         ]

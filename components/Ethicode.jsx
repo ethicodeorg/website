@@ -18,8 +18,14 @@ const Ethicode = () => {
       }) +
       `</${item.html_tag}>`;
   });
-
-  return <div className="vision" dangerouslySetInnerHTML={{ __html: visionContent }}></div>;
+  visionContent = visionContent.replace(/n>,<span/g, 'n><span');
+  
+  return (
+    <div
+      className="vision"
+      dangerouslySetInnerHTML={{ __html: visionContent }}
+    ></div>
+  );
 };
 
 export default Ethicode;
