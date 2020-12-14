@@ -82,40 +82,42 @@ class Header extends Component {
     }
   }
   render() {
-    return this.state.menuType === 'dark' ? (
-      <div className="menu menu-main">
-        <Link href="/">
-          <a className={this.state.ethicodeClass}>
-            <img src="/assets/ethicode-logo-white.png" alt="ethicode-logo" className="logo" />
-          </a>
-        </Link>
-        <Link href="/work">
-          <a className={this.state.workClass}>Work&nbsp;</a>
-        </Link>
-        <Link href="/about">
-          <a className={this.state.aboutClass}>About&nbsp;</a>
-        </Link>
-        <Link href="/contact">
-          <a className={this.state.contactClass}>Contact&nbsp;</a>
-        </Link>
-      </div>
-    ) : (
-      <div className="menu menu-main menu-main-light">
-        <Link href="/">
-          <a className="menu-item menu-item-main menu-item-active menu-item-first">
-            <img src="/assets/ethicode-logo-black.png" alt="ethicode-logo" className="logo" />
-          </a>
-        </Link>
-        <Link href="/about">
-          <a className={this.state.aboutClass}>About&nbsp;</a>
-        </Link>
-        <Link href="/work">
-          <a className={this.state.workClass}>Work&nbsp;</a>
-        </Link>
-        <Link href="/contact">
-          <a className={this.state.contactClass}>Contact&nbsp;</a>
-        </Link>
-      </div>
+    return (
+      this.state.menuType === 'dark' ? (
+          <div className="menu menu-main">
+            <Link href="/">
+              <a className={this.state.ethicodeClass}>
+                <img src="/assets/ethicode-logo-white.png" alt="ethicode-logo" className="logo" />
+              </a>
+            </Link>
+            <Link href="/about">
+              <a className={this.state.aboutClass}>About&nbsp;</a>
+            </Link>
+            <Link href="/work">
+              <a className={this.state.workClass}>Work&nbsp;</a>
+            </Link>
+            <Link href="/contact">
+              <a className={this.state.contactClass}>Contact&nbsp;</a>
+            </Link>
+          </div>
+        ) : (
+          <div className="menu menu-main menu-main-light">
+            <Link href="/">
+              <a className="menu-item menu-item-main menu-item-active menu-item-first">
+                <img src="/assets/ethicode-logo-black.png" alt="ethicode-logo" className="logo" />
+              </a>
+            </Link>
+            <Link href="/about">
+              <a className={this.state.aboutClass}>About&nbsp;</a>
+            </Link>
+            <Link href="/work">
+              <a className={this.state.workClass}>Work&nbsp;</a>
+            </Link>
+            <Link href="/contact">
+              <a className={this.state.contactClass}>Contact&nbsp;</a>
+            </Link>
+          </div>
+        )
     );
   }
 }
