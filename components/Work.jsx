@@ -1,34 +1,43 @@
 import content from '../public/content.json';
 const workContent = content.Work;
 
-const getImgUrl = (pic) => {
-  return require('../public/assets/' + pic);
-};
-
 const Work = () => {
   let workContentString = '';
 
+  const getImgUrl = (pic) => {
+    if (typeof window !== 'undefined') {
+      pic = Function('"use strict";return (' + pic + ')')();
+    } else {
+      let picArray = pic.toString().split(':');
+      pic = picArray[1].replace(/[',' ']/g, '');
+    }
+    return '../assets/' + pic;
+  };
+
   workContent.paragraphs.forEach((paragraph) => {
-    /* workContentString = workContentString + 
-        `<h3 class="paragraph-title">${paragraph.title}</h3>
-        <img
+    workContentString =
+      workContentString +
+      `<h3 class="paragraph-title">${paragraph.title}</h3>
+      <img
             src=${getImgUrl(paragraph.image.img)}
             v-bind:alt="p.image.img"
             class="picture-${paragraph.image.name}"
         />
-        <p>${paragraph.smallText}</p>` */
-    workContentString =
-      workContentString +
-      `<h3 class="paragraph-title">${paragraph.title}</h3>
-        <p>${paragraph.smallText}</p>
-        <a href="${paragraph.links[0].url}" class="paragraph-link" target="_blank" rel="noopener noreferer">${paragraph.links[0].linkText}</a>`;
+        <p class="paragraph-small-text">${paragraph.smallText}</p>
+        <a href="${
+          paragraph.links[0].url
+        }" class="paragraph-link" target="_blank" rel="noopener noreferer">${
+        paragraph.links[0].linkText
+      }</a>`;
   });
 
   return (
     <section id="work">
-      <h2 className="main-title animate slide-up animate-active">{workContent.mainTitle}</h2>
+      <h2 className="main-title">{workContent.mainTitle}</h2>
 
-      <div dangerouslySetInnerHTML={{ __html: workContentString }}></div>
+      <div className="front-page">
+        <div className="paragraph" dangerouslySetInnerHTML={{ __html: workContentString }}></div>
+      </div>
 
       <style jsx scoped>{`
         .main-title {
