@@ -11,15 +11,14 @@ export default function Index() {
       <div className="ethicode">
         <Ethicode />
       </div>
-      <div className="page-container page-container-dark">
-        <About />
-        <br />
-      </div>
       <div className="page-container">
         <Work />
-        <br />
+      </div>
+      <div className="page-container page-container-dark">
+        <About />
+      </div>
+      <div className="page-container">
         <Contact />
-        <br />
       </div>
     </Fragment>
   );
