@@ -1,23 +1,16 @@
 import content from '../public/content.json';
-const contactContent = content.Contact;
 
 const Contact = () => {
-  let contactContentString = '';
-
-  contactContent.paragraphs.forEach((paragraph) => {
-    contactContentString = contactContentString + `<p>${paragraph.text}</p>`;
-  });
-
+  const contactContent = content.Contact;
   return (
     <section id="contact">
       <h2 className="main-title">{contactContent.mainTitle}</h2>
 
-      <div dangerouslySetInnerHTML={{ __html: contactContentString }}></div>
-
-      {/* {contactContent.paragraphs.forEach(paragraph => {
-                console.log(`<p>${paragraph.text}</p>`)
-                return(`<p>${paragraph.text}</p>`)
-            })} */}
+      {contactContent.paragraphs.map((paragraph, iP) => (
+        <div key={iP}>
+          <p>{paragraph.text}</p>
+        </div>
+      ))}
 
       <style jsx scoped>{`
         .main-title {

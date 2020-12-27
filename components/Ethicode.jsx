@@ -1,30 +1,121 @@
-import content from '../public/content.json';
-
 const Ethicode = () => {
-  const displayItems = content.Ethicode.content;
-
-  let visionContent = '';
-
-  displayItems.forEach((item) => {
-    visionContent =
-      visionContent +
-      `<${item.html_tag} class="visionContent">` +
-      item.display.map((item) => {
-        if (item[1].length) {
-          return `<span class="${item[1]}">${item[0]}</span>`;
-        } else {
-          return `<span>${item[0]}</span>`;
-        }
-      }) +
-      `</${item.html_tag}>`;
-  });
-  visionContent = visionContent.replace(/n>,<span/g, 'n><span');
-  
   return (
-    <div
-      className="vision"
-      dangerouslySetInnerHTML={{ __html: visionContent }}
-    ></div>
+    <div className="vision">
+      <h2 className="visionContent pink">For a world</h2>
+      <h3 className="visionContent">
+        where all
+        <span className="yellow"> sentient beings</span>
+      </h3>
+      <h4>
+        have the right to
+        <span className="blue"> life</span>, <span className="blue">liberty</span>, and the
+        <span className="blue"> pursuit of happiness</span>.
+      </h4>
+
+      <style>{`
+        .vision {
+          height: 100vh;
+          padding: 0 20px;
+        }
+        .visionContent {
+          font-style: italic;
+          font-weight: bold;
+          text-align: left;
+        }
+        h2 {
+          padding-top: 33vh;
+        }
+        h2,
+        h3 {
+          max-width: 1200px;
+          margin: 0 auto;
+          font-size: 48px;
+          text-align: left;
+          line-height: 48px;
+          color: #eee;
+          font-style: italic;
+          -webkit-animation: fadeInBottom 1s;
+          animation: fadeInBottom 1s;
+        }
+        h3 {
+          font-size: 32px;
+          line-height: 32px;
+        }
+        h4 {
+          max-width: 1200px;
+          padding-top: 5px;
+          margin: 0 auto;
+          color: #eee;
+          font-size: 18px;
+          text-align: left;
+          font-style: italic;
+          line-height: 24px;
+          -webkit-animation: fadeInBottom 1.5s;
+          animation: fadeInBottom 1.5s;
+        }
+        .pink {
+          color: #f0006d;
+        }
+        .yellow {
+          color: #ffd300;
+        }
+        .blue {
+          color: #00bad4;
+        }
+        .white {
+          color: #eeee;
+        }
+
+        @media screen and (min-width: 450px) {
+          h2 {
+            font-size: 72px;
+            line-height: 60px;
+          }
+          h3 {
+            font-size: 48px;
+            line-height: 48px;
+          }
+          h4 {
+            font-size: 24px;
+            line-height: 28px;
+          }
+        }
+
+        @media screen and (min-width: 800px) {
+          .vision {
+            padding: 0 45px;
+          }
+          h2 {
+            font-size: 112px;
+            line-height: 104px;
+          }
+          h3 {
+            font-size: 56px;
+            line-height: 56px;
+          }
+          h4 {
+            font-size: 30px;
+            line-height: 34px;
+          }
+        }
+
+        @media screen and (min-width: 1200px) {
+          h2 {
+            font-size: 172px;
+            line-height: 156px;
+          }
+          h3 {
+            font-size: 80px;
+            line-height: 80px;
+          }
+          h4 {
+            font-size: 40px;
+            line-height: 44px;
+            padding-top: 10px;
+          }
+        }
+      `}</style>
+    </div>
   );
 };
 

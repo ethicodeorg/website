@@ -1,9 +1,7 @@
 import content from '../public/content.json';
-const workContent = content.Work;
 
 const Work = () => {
-  let workContentString = '';
-
+  const workContent = content.Work;
   const getImgUrl = (pic) => {
     if (typeof window !== 'undefined') {
       pic = Function('"use strict";return (' + pic + ')')();
@@ -11,32 +9,30 @@ const Work = () => {
       let picArray = pic.toString().split(':');
       pic = picArray[1].replace(/[',' ']/g, '');
     }
+
     return '../assets/' + pic;
   };
-
-  workContent.paragraphs.forEach((paragraph) => {
-    workContentString =
-      workContentString +
-      `<h3 class="paragraph-title">${paragraph.title}</h3>
-      <img
-            src=${getImgUrl(paragraph.image.img)}
-            v-bind:alt="p.image.img"
-            class="picture-${paragraph.image.name}"
-        />
-        <p class="paragraph-small-text">${paragraph.smallText}</p>
-        <a href="${
-          paragraph.links[0].url
-        }" class="paragraph-link" target="_blank" rel="noopener noreferer">${
-        paragraph.links[0].linkText
-      }</a>`;
-  });
 
   return (
     <section id="work">
       <h2 className="main-title">{workContent.mainTitle}</h2>
 
       <div className="front-page">
-        <div className="paragraph" dangerouslySetInnerHTML={{ __html: workContentString }}></div>
+        {workContent.paragraphs.map((paragraph, iP) => (
+          <div key={iP} className="paragraph">
+            <h3 className="paragraph-title">{paragraph.title}</h3>
+            <img src={getImgUrl(paragraph.image.img)} alt="p.image.img" className="picture" />
+            <p className="paragraph-small-text">{paragraph.smallText}</p>
+            <a
+              href={paragraph.links[0].url}
+              className="paragraph-link"
+              target="_blank"
+              rel="noopener noreferer"
+            >
+              {paragraph.links[0].linkText}
+            </a>
+          </div>
+        ))}
       </div>
 
       <style jsx scoped>{`
