@@ -4,14 +4,35 @@ const aboutContent = content.About;
 const About = () => {
   let aboutContentString = '';
 
-  aboutContent.paragraphs.forEach((paragraph) => {
+  aboutContent.paragraphs.forEach((paragraph, index) => {
     aboutContentString =
       aboutContentString +
-      `<div class="paragraph"><h3 class="paragraph-title paragraph-title-rotate${paragraph.titleRotate}">${paragraph.title}</h3><p class="paragraph-text">${paragraph.text}</p><style>p {display: block;
-          margin-block-start: 1em;
-          margin-block-end: 1em;
-          margin-inline-start: 0px;
-          margin-inline-end: 0px;}</style></div>`;
+      `<div class="paragraph"><h3 class="paragraph-title paragraph-title-rotate${paragraph.titleRotate}">${paragraph.title}</h3><p class="paragraph-text">${paragraph.text}</p>`;
+
+    paragraph.image &&
+      (aboutContentString =
+        aboutContentString +
+        `<img src="/assets/${paragraph.image.img}" alt="${paragraph.image.name}" />`);
+
+    paragraph.about &&
+      (aboutContentString =
+        aboutContentString + `<p class="paragraph-about">${paragraph.about}</p>`);
+
+    paragraph.route &&
+      (aboutContentString =
+        aboutContentString +
+        `<a href="${paragraph.route.route}" class="paragraph-link">${paragraph.route.text}</a>`);
+
+    aboutContent.paragraphs.length - 1 == index &&
+      (aboutContentString =
+        aboutContentString +
+        `<style>p {display: block;
+        margin-block-start: 1em;
+        margin-block-end: 1em;
+        margin-inline-start: 0px;
+        margin-inline-end: 0px;}</style>`);
+
+    aboutContentString = aboutContentString + `</div>`;
   });
 
   return (
