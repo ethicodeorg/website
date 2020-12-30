@@ -1,18 +1,27 @@
+import theme from '../styles/theme';
+import FadeInBottom from './FadeInBottom';
+
 const Ethicode = () => {
   return (
     <div className="vision">
-      <h2 className="visionContent pink">For a world</h2>
-      <h3 className="visionContent">
-        where all
-        <span className="yellow"> sentient beings</span>
-      </h3>
-      <h4>
-        have the right to
-        <span className="blue"> life</span>, <span className="blue">liberty</span>, and the
-        <span className="blue"> pursuit of happiness</span>.
-      </h4>
+      <FadeInBottom duration={1}>
+        <h2 className="visionContent pink">For a world</h2>
+      </FadeInBottom>
+      <FadeInBottom duration={1}>
+        <h3 className="visionContent">
+          where all
+          <span className="yellow"> sentient beings</span>
+        </h3>
+      </FadeInBottom>
+      <FadeInBottom duration={1.5}>
+        <h4>
+          have the right to
+          <span className="blue"> life</span>, <span className="blue">liberty</span>, and the
+          <span className="blue"> pursuit of happiness</span>.
+        </h4>
+      </FadeInBottom>
 
-      <style>{`
+      <style jsx scoped>{`
         .vision {
           height: 100vh;
           padding: 0 20px;
@@ -32,10 +41,8 @@ const Ethicode = () => {
           font-size: 48px;
           text-align: left;
           line-height: 48px;
-          color: #eee;
+          color: ${theme.colors.lightText};
           font-style: italic;
-          -webkit-animation: fadeInBottom 1s;
-          animation: fadeInBottom 1s;
         }
         h3 {
           font-size: 32px;
@@ -45,25 +52,23 @@ const Ethicode = () => {
           max-width: 1200px;
           padding-top: 5px;
           margin: 0 auto;
-          color: #eee;
+          color: ${theme.colors.lightText};
           font-size: 18px;
           text-align: left;
           font-style: italic;
           line-height: 24px;
-          -webkit-animation: fadeInBottom 1.5s;
-          animation: fadeInBottom 1.5s;
         }
         .pink {
-          color: #f0006d;
+          color: ${theme.colors.pink};
         }
         .yellow {
-          color: #ffd300;
+          color: ${theme.colors.yellow};
         }
         .blue {
-          color: #00bad4;
+          color: ${theme.colors.blue};
         }
         .white {
-          color: #eeee;
+          color: ${theme.colors.lightText};
         }
 
         @media screen and (min-width: 450px) {

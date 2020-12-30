@@ -1,73 +1,29 @@
 import content from '../public/content.json';
+import Content from './Content';
+import MainTitle from './MainTitle';
 
 const Work = () => {
   const workContent = content.Work;
-  const getImgUrl = (pic) => {
-    if (typeof window !== 'undefined') {
-      pic = Function('"use strict";return (' + pic + ')')();
-    } else {
-      let picArray = pic.toString().split(':');
-      pic = picArray[1].replace(/[',' ']/g, '');
-    }
-
-    return '../assets/' + pic;
-  };
 
   return (
     <section id="work">
-      <h2 className="main-title">{workContent.mainTitle}</h2>
+      <MainTitle title={workContent.mainTitle} />
 
-      <div className="front-page">
+      <div className="work">
         {workContent.paragraphs.map((paragraph, iP) => (
-          <div key={iP} className="paragraph">
-            <h3 className="paragraph-title">{paragraph.title}</h3>
-            <img src={getImgUrl(paragraph.image.img)} alt="p.image.img" className="picture" />
-            <p className="paragraph-small-text">{paragraph.smallText}</p>
-            <a
-              href={paragraph.links[0].url}
-              className="paragraph-link"
-              target="_blank"
-              rel="noopener noreferer"
-            >
-              {paragraph.links[0].linkText}
-            </a>
-          </div>
+          <Content key={iP} paragraph={paragraph} />
         ))}
       </div>
 
       <style jsx scoped>{`
-        .main-title {
+        .work {
+          display: flex;
+          flex-wrap: wrap;
+          justify-content: space-between;
           max-width: 1200px;
-          padding-top: 100px;
           margin: 0 auto;
-          font-size: 36px;
           text-align: left;
-          line-height: 50px;
-          color: #222;
-          -webkit-animation: fadeInBottom 1s;
-          animation: fadeInBottom 1s;
-        }
-
-        @media screen and (min-width: 600px) {
-          .main-title {
-            padding-top: 160px;
-            font-size: 48px;
-            line-height: 100px;
-          }
-        }
-
-        @media screen and (min-width: 1000px) {
-          .main-title {
-            font-size: 72px;
-            line-height: 120px;
-          }
-        }
-
-        @media screen and (min-width: 1200px) {
-          .main-title {
-            font-size: 104px;
-            line-height: 120px;
-          }
+          padding: 50px 0;
         }
       `}</style>
     </section>

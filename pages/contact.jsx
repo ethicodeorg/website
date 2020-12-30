@@ -1,11 +1,10 @@
-// import the various components of the page
 import Contact from '../components/Contact';
+import PageContainer from '../components/PageContainer';
 
 export default function ContactPage() {
   return (
-    <div className="page-container">
+    <PageContainer>
       <Contact />
-      <br />
-    </div>
+    </PageContainer>
   );
 }

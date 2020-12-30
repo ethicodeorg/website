@@ -28,7 +28,7 @@
   },
 
   "About": {
-    "mainTitle": "",
+    "mainTitle": "About",
     "paragraphs": [
       {
         "title": "Why",
@@ -75,7 +75,8 @@
           }
         ],
         "image": {
-          "img": "window.innerWidth < 600 ? 'mobile-food-e.png' : 'food-e.png'",
+          "img": "food-e.png",
+          "mobileImg": "mobile-food-e.png",
           "name": "food·e"
         }
       },
@@ -89,7 +90,8 @@
           }
         ],
         "image": {
-          "img": "window.innerWidth < 600 ? 'mobile-ethicodeorg.png' : 'ethicodeorg.png'",
+          "img": "ethicodeorg.png",
+          "mobileImg": "mobile-ethicodeorg.png",
           "name": "ethicode"
         }
       },
@@ -103,7 +105,8 @@
           }
         ],
         "image": {
-          "img": "window.innerWidth < 600 ? 'mobile-veganbotpic.png' : 'veganbotpic.png'",
+          "img": "veganbotpic.png",
+          "mobileImg": "mobile-veganbotpic.png",
           "name": "veganbot"
         }
       }

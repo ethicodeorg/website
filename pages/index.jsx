@@ -1,9 +1,9 @@
 import { Fragment } from 'react';
-// import the various components of the page
 import About from '../components/About';
 import Contact from '../components/Contact';
 import Ethicode from '../components/Ethicode';
 import Work from '../components/Work';
+import PageContainer from '../components/PageContainer';
 
 export default function Index() {
   return (
@@ -11,15 +11,15 @@ export default function Index() {
       <div className="ethicode">
         <Ethicode />
       </div>
-      <div className="page-container">
+      <PageContainer>
         <Work />
-      </div>
-      <div className="page-container page-container-dark">
+      </PageContainer>
+      <PageContainer isDark>
         <About />
-      </div>
-      <div className="page-container">
+      </PageContainer>
+      <PageContainer>
         <Contact />
-      </div>
+      </PageContainer>
     </Fragment>
   );
 }
