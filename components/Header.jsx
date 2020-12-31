@@ -4,7 +4,7 @@ import classNames from 'classnames';
 import theme from '../styles/theme';
 
 const Header = ({ currentPage }) => {
-  const darkPages = ['AboutPage', 'Index', 'Error'];
+  const darkPages = ['AboutPage', 'TeamPage', 'Index', 'Error'];
   const isDark = darkPages.includes(currentPage);
 
   return (
@@ -18,6 +18,15 @@ const Header = ({ currentPage }) => {
           />
         </a>
       </Link>
+      <Link href="/work">
+        <a
+          className={classNames('menu-item', {
+            'menu-item-active': currentPage === 'WorkPage',
+          })}
+        >
+          Work
+        </a>
+      </Link>
       <Link href="/about">
         <a
           className={classNames('menu-item', {
@@ -27,13 +36,13 @@ const Header = ({ currentPage }) => {
           About
         </a>
       </Link>
-      <Link href="/work">
+      <Link href="/team">
         <a
           className={classNames('menu-item', {
-            'menu-item-active': currentPage === 'WorkPage',
+            'menu-item-active': currentPage === 'TeamPage',
           })}
         >
-          Work
+          Team
         </a>
       </Link>
       <Link href="/contact">

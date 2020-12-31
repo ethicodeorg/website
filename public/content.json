@@ -113,6 +113,53 @@
     ]
   },
 
+  "Team": {
+    "mainTitle": "Members",
+    "subtitle": "Ethicode has a wonderful team of passionate volunteers whos' mission aligns perfectly with Ethicodes'.",
+    "members": [
+      {
+        "name": "Arianna Wolff",
+        "title": "Content Writer",
+        "img": "arianna.png"
+      },
+      {
+        "name": "Atli Sævar",
+        "title": "Founder, Software Engineer",
+        "img": "tveir_i_sjotta.jpg"
+      },
+      {
+        "name": "Carlos Marquez",
+        "title": "Filmmaker",
+        "img": "carlos.png"
+      },
+      {
+        "name": "Costanza Baldrighi",
+        "title": "Marketing Manager",
+        "img": "co.png"
+      },
+      {
+        "name": "Daniele Gariboldi",
+        "title": "Translator",
+        "img": "dan.png"
+      },
+      {
+        "name": "Juliette Forest",
+        "title": "Translator",
+        "img": "juliette.png"
+      },
+      {
+        "name": "Marina Babtista Rosa",
+        "title": "Translator",
+        "img": "marina.png"
+      },
+      {
+        "name": "Valentina Caldart",
+        "title": "Content Writer, Quality Analyst",
+        "img": "valentina.png"
+      }
+    ]
+  },
+
   "Contact": {
     "mainTitle": "Get in touch",
     "paragraphs": [

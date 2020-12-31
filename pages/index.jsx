@@ -4,6 +4,7 @@ import Contact from '../components/Contact';
 import Ethicode from '../components/Ethicode';
 import Work from '../components/Work';
 import PageContainer from '../components/PageContainer';
+import Team from '../components/Team';
 
 export default function Index() {
   return (
@@ -16,6 +17,9 @@ export default function Index() {
       </PageContainer>
       <PageContainer isDark>
         <About />
+      </PageContainer>
+      <PageContainer isDark>
+        <Team />
       </PageContainer>
       <PageContainer>
         <Contact />
