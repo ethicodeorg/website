@@ -1,8 +1,11 @@
 import Link from 'next/link';
 import theme from '../styles/theme';
 import FadeInBottom from './FadeInBottom';
+import { useMediaQuery } from './utils/MediaQuery';
 
 const Content = ({ paragraph, isDark }) => {
+  const isBreakpoint = useMediaQuery(600);
+
   return (
     <div className="paragraph">
       {paragraph.title && (
@@ -19,7 +22,11 @@ const Content = ({ paragraph, isDark }) => {
       )}
       {paragraph.image && (
         <FadeInBottom duration={0.7}>
-          <img src={paragraph.image.img} alt="paragraph.image.img" className="picture" />
+          <img
+            src={isBreakpoint ? paragraph.image.mobileImg : paragraph.image.img}
+            alt="paragraph.image.img"
+            className="picture"
+          />
         </FadeInBottom>
       )}
       {paragraph.about && (
