@@ -40,7 +40,7 @@ const Team = () => {
               <div className="socials">
                 {member.networks.map((network, iN) => (
                   <div key={iN} className="social">
-                    <FadeInBottom duration={0.7} animation="rotateIn" offset={0}>
+                    <FadeInBottom duration={0.7} animation="rotateIn" offset={0} delay={iN * 200}>
                       <SocialIcon
                         url={network}
                         target="_blank"
@@ -105,6 +105,9 @@ const Team = () => {
           filter: none;
         }
         .member-name {
+          display: flex;
+          justify-content: center;
+          align-items: center;
           margin: 10px 0 0;
           color: ${theme.colors.yellow};
           font-size: 24px;

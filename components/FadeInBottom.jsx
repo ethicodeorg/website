@@ -1,6 +1,6 @@
 import ScrollAnimation from 'react-animate-on-scroll';
 
-const FadeInBottom = ({ children, duration, animation = 'fadeInUp', offset = 100 }) => {
+const FadeInBottom = ({ children, duration, animation = 'fadeInUp', offset = 100, delay = 0 }) => {
   return (
     <ScrollAnimation
       animateIn={animation}
@@ -8,6 +8,7 @@ const FadeInBottom = ({ children, duration, animation = 'fadeInUp', offset = 100
       animateOnce={true}
       duration={duration}
       offset={offset}
+      delay={delay}
     >
       {children}
     </ScrollAnimation>

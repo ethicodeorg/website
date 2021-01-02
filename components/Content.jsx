@@ -58,7 +58,7 @@ const Content = ({ paragraph, isDark }) => {
         <div className="socials">
           {paragraph.socials.map((network, iN) => (
             <div key={iN} className="social">
-              <FadeInBottom duration={0.7} animation="rotateIn">
+              <FadeInBottom duration={0.7} animation="rotateIn" delay={iN * 200}>
                 <SocialIcon
                   url={network}
                   target="_blank"
