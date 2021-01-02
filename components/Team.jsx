@@ -40,7 +40,7 @@ const Team = () => {
               <div className="socials">
                 {member.networks.map((network, iN) => (
                   <div key={iN} className="social">
-                    <FadeInBottom duration={0.7} animation="rotateIn" offset={0} delay={iN * 200}>
+                    <FadeInBottom duration={0.7} animation="rotateIn" offset={0} delay={iN * 120}>
                       <SocialIcon
                         url={network}
                         target="_blank"
@@ -49,6 +49,7 @@ const Team = () => {
                             ? theme.colors.pink
                             : ''
                         }
+                        style={{ height: 40, width: 40 }}
                       />
                     </FadeInBottom>
                   </div>
@@ -90,7 +91,7 @@ const Team = () => {
         }
         .member {
           text-align: center;
-          margin: 20px 25px 70px;
+          margin: 20px 25px 60px;
           cursor: pointer;
         }
         .active-member {
@@ -137,7 +138,7 @@ const Team = () => {
             margin: 0 -25px;
           }
           .member {
-            margin: 20px 25px 70px;
+            margin: 20px 25px 60px;
           }
           .active-member {
             margin-bottom: 0;
