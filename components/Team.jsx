@@ -1,3 +1,6 @@
+import React, { useState } from 'react';
+import classNames from 'classnames';
+import { SocialIcon } from 'react-social-icons';
 import content from '../public/content.json';
 import theme from '../styles/theme';
 import FadeInBottom from './FadeInBottom';
@@ -5,15 +8,27 @@ import MainTitle from './MainTitle';
 
 const Team = () => {
   const teamContent = content.Team;
+  const [activeMember, setActiveMember] = useState();
+
   return (
     <section id="team">
       <MainTitle title={teamContent.mainTitle} isDark />
       <FadeInBottom duration={0.7}>
-        <div className="subtitle">{teamContent.subtitle}</div>
+        <div className="subtitle">
+          Ethicode is a team of <span className="passion">passionate volunteers</span> who share a{' '}
+          <span className="vision">common vision</span> of a{' '}
+          <span className="compassion">more compassionate</span> future.
+        </div>
       </FadeInBottom>
       <div className="team">
         {teamContent.members.map((member, iM) => (
-          <div key={iM} className="member">
+          <div
+            key={iM}
+            className={classNames('member', {
+              'active-member': activeMember === iM,
+            })}
+            onClick={() => setActiveMember(activeMember === iM ? undefined : iM)}
+          >
             <FadeInBottom duration={0.7} animation="rotateIn">
               <img src={member.img} alt={member.name} className="member-pic" />
             </FadeInBottom>
@@ -21,19 +36,34 @@ const Team = () => {
               <div className="member-name">{member.name}</div>
               <div className="member-title">{member.title}</div>
             </FadeInBottom>
+            {activeMember === iM && (
+              <div className="socials">
+                {member.networks.map((network, iN) => (
+                  <div key={iN} className="social">
+                    <FadeInBottom duration={0.7} animation="rotateIn" offset={0}>
+                      <SocialIcon
+                        url={network}
+                        target="_blank"
+                        bgColor={
+                          network.includes('mailto') || network.includes('carlosmarquezperez')
+                            ? theme.colors.pink
+                            : ''
+                        }
+                      />
+                    </FadeInBottom>
+                  </div>
+                ))}
+              </div>
+            )}
           </div>
         ))}
       </div>
 
       <style jsx scoped>{`
-        .team {
-          display: flex;
-          flex-wrap: wrap;
-          justify-content: space-between;
+        #team {
           max-width: 1200px;
           margin: 0 auto;
           text-align: left;
-          padding: 50px 0;
         }
         .subtitle {
           max-width: 1200px;
@@ -42,16 +72,32 @@ const Team = () => {
           font-style: italic;
           color: ${theme.colors.lightText};
         }
-        .member {
-          width: 250px;
-          text-align: center;
-          margin-bottom: 40px;
+        .passion {
+          color: ${theme.colors.pink};
         }
-        .member:nth-child(2n) {
-          padding-top: 50px;
+        .vision {
+          color: ${theme.colors.yellow};
+        }
+        .compassion {
+          color: ${theme.colors.blue};
+        }
+        .team {
+          display: inline-flex;
+          flex-wrap: wrap;
+          justify-content: center;
+          width: 100%;
+          padding: 50px 0;
+        }
+        .member {
+          text-align: center;
+          margin: 20px 25px 70px;
+          cursor: pointer;
+        }
+        .active-member {
+          margin-bottom: 0;
         }
         .member-pic {
-          width: 250px;
+          width: 262.5px;
           clip-path: circle(125px at center);
           filter: grayscale(1);
         }
@@ -65,9 +111,40 @@ const Team = () => {
           font-style: italic;
         }
         .member-title {
-          color: ${theme.colors.yellow};
+          color: ${theme.colors.lightText};
           font-size: 18px;
           font-style: italic;
+        }
+        .socials {
+          display: flex;
+          justify-content: center;
+          margin-top: 10px;
+        }
+        .social {
+          margin: 5px;
+          transition: all 0.2s ease-in-out;
+        }
+        .social:hover {
+          transform: scale(1.1);
+        }
+
+        @media screen and (min-width: 800px) {
+          .team {
+            width: calc(100% + 50px);
+            margin: 0 -25px;
+          }
+          .member {
+            margin: 20px 25px 70px;
+          }
+          .active-member {
+            margin-bottom: 0;
+          }
+        }
+
+        @media screen and (min-width: 1200px) {
+          .member:nth-child(2n) {
+            padding-top: 50px;
+          }
         }
       `}</style>
     </section>
