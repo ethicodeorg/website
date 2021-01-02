@@ -5,6 +5,7 @@ import theme from '../styles/theme';
 
 const Header = ({ currentPage }) => {
   const darkPages = ['AboutPage', 'TeamPage', 'Index', 'Error'];
+  console.log(currentPage);
   const isDark = darkPages.includes(currentPage);
 
   return (
