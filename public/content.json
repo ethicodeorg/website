@@ -141,10 +141,7 @@
         "name": "Costanza Baldrighi",
         "title": "Marketing Manager",
         "img": "co.png",
-        "networks": [
-          "https://linkedin.com/in/costanza-baldrighi-a610621a1",
-          "https://instagram.com/_cobalt_27"
-        ]
+        "networks": ["https://linkedin.com/in/costanza-baldrighi-a610621a1"]
       },
       {
         "name": "Daniele Gariboldi",
@@ -193,9 +190,10 @@
         "title": "Content Writer & Quality Analyst",
         "img": "valentina.png",
         "networks": [
+          "mailto:valecaldi94@gmail.com",
           "https://www.linkedin.com/in/valentinacaldart/",
-          "https://instagram.com/nutrizionechevale",
-          "https://instagram.com/caldivale"
+          "https://instagram.com/caldivale",
+          "https://www.facebook.com/valentina.caldart"
         ]
       },
       {
