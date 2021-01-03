@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import { SocialIcon } from 'react-social-icons';
 import theme from '../styles/theme';
 import FadeInBottom from './FadeInBottom';
 import { useMediaQuery } from './utils/MediaQuery';
@@ -52,6 +53,22 @@ const Content = ({ paragraph, isDark }) => {
             {paragraph.links[0].linkText}
           </a>
         </FadeInBottom>
+      )}
+      {paragraph.socials && (
+        <div className="socials">
+          {paragraph.socials.map((network, iN) => (
+            <div key={iN} className="social">
+              <FadeInBottom duration={0.7} animation="rotateIn" delay={iN * 200}>
+                <SocialIcon
+                  url={network}
+                  target="_blank"
+                  style={{ height: 70, width: 70 }}
+                  bgColor={iN === 0 ? theme.colors.pink : ''}
+                />
+              </FadeInBottom>
+            </div>
+          ))}
+        </div>
       )}
       {paragraph.route && (
         <FadeInBottom duration={0.7}>
@@ -139,6 +156,18 @@ const Content = ({ paragraph, isDark }) => {
           display: block;
           padding: 0;
           width: 100%;
+        }
+        .socials {
+          display: flex;
+          flex-wrap: wrap;
+          margin-top: 10px;
+        }
+        .social {
+          margin: 5px;
+          transition: all 0.2s ease-in-out;
+        }
+        .social:hover {
+          transform: scale(1.1);
         }
 
         @media screen and (min-width: 800px) {

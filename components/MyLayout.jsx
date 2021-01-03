@@ -3,7 +3,7 @@ import React from 'react';
 import Header from '../components/Header';
 import theme from '../styles/theme';
 
-export default function Layout({ children, title = 'Ethicode', ...props }) {
+export default function Layout({ children, title = 'Ethicode' }) {
   return (
     <div>
       <Head>
@@ -22,7 +22,7 @@ export default function Layout({ children, title = 'Ethicode', ...props }) {
       </Head>
 
       <div id="app">
-        <Header currentPage={children.type.name} />
+        <Header />
         {children}
 
         <style jsx global>

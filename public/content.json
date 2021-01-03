@@ -43,21 +43,16 @@
       {
         "title": "Who",
         "titleRotate": "120",
-        "text": "Currently, it's just me..",
-        "image": {
-          "img": "tveir_i_sjotta.jpg",
-          "name": "atli"
-        },
-        "about": "Atli Sævar, CVO and founder"
+        "text": "We are a team of volunteers inspired to find new ways to advocate for animals.",
+        "route": {
+          "text": "Meet the team",
+          "route": "/team"
+        }
       },
       {
-        "title": "What now",
+        "title": "What we love",
         "titleRotate": "200",
-        "text": "..but Ethicode is looking to expand!",
-        "route": {
-          "text": "Get in touch",
-          "route": "/contact"
-        }
+        "text": "We love asking questions and initiating discussions about stuff that interests us. We love flexing different muscles and chasing our inspiration. We love communicating with the truth because life is short and we don't wanna spend any of it on bullshit."
       }
     ]
   },
@@ -113,6 +108,104 @@
     ]
   },
 
+  "Team": {
+    "mainTitle": "Meet the team",
+    "members": [
+      {
+        "name": "Arianna Wolff",
+        "title": "Content Writer",
+        "img": "arianna.png",
+        "networks": ["https://linkedin.com/in/arianna-wolff"]
+      },
+      {
+        "name": "Atli Sævar",
+        "title": "Founder & Software Engineer",
+        "img": "atli.png",
+        "networks": [
+          "mailto:atli@ethicode.org",
+          "https://linkedin.com/in/atlisaevar",
+          "https://instagram.com/atlisaevar",
+          "https://facebook.com/atlisaevar"
+        ]
+      },
+      {
+        "name": "Carlos Marquez",
+        "title": "Filmmaker",
+        "img": "carlos.png",
+        "networks": [
+          "http://carlosmarquezperez.com/",
+          "https://linkedin.com/in/carlos-marquez-perez-15539a89"
+        ]
+      },
+      {
+        "name": "Costanza Baldrighi",
+        "title": "Marketing Manager",
+        "img": "co.png",
+        "networks": ["https://linkedin.com/in/costanza-baldrighi-a610621a1"]
+      },
+      {
+        "name": "Daniele Gariboldi",
+        "title": "Translator",
+        "img": "dan.png",
+        "networks": [
+          "https://www.linkedin.com/in/daniele-gariboldi-a1556b184/",
+          "https://instagram.com/dangariboldi"
+        ]
+      },
+      {
+        "name": "Ethel Granini",
+        "title": "Translator & Content Writer",
+        "img": "ethel.png",
+        "networks": ["https://www.linkedin.com/in/ethel-denise-granini-3127461a9/"]
+      },
+      {
+        "name": "Juliette Forest",
+        "title": "Translator",
+        "img": "juliette.png",
+        "networks": [
+          "https://www.linkedin.com/in/juliette-forest/",
+          "https://instagram.com/ptitcrocro"
+        ]
+      },
+      {
+        "name": "Marina Baptista Rosa",
+        "title": "Translator",
+        "img": "marina.png",
+        "networks": [
+          "mailto:b_nina@live.com",
+          "https://www.linkedin.com/in/marina-baptista-rosa/",
+          "https://instagram.com/marina.vbr"
+        ]
+      },
+      {
+        "name": "Panagiota Alamaniotou",
+        "title": "Business Development Manager",
+        "img": "yiota.png",
+        "networks": [
+          "https://www.linkedin.com/in/panagiota-alamaniotou-004964176/",
+          "https://instagram.com/giotaalamaniotou"
+        ]
+      },
+      {
+        "name": "Valentina Caldart",
+        "title": "Content Writer & Quality Analyst",
+        "img": "valentina.png",
+        "networks": [
+          "mailto:valecaldi94@gmail.com",
+          "https://www.linkedin.com/in/valentinacaldart/",
+          "https://instagram.com/caldivale",
+          "https://www.facebook.com/valentina.caldart"
+        ]
+      },
+      {
+        "name": "Wyatt Beere",
+        "title": "Content Writer",
+        "img": "wyatt.png",
+        "networks": ["mailto:wyattbeere@gmail.com", "https://instagram.com/wyattbeere"]
+      }
+    ]
+  },
+
   "Contact": {
     "mainTitle": "Get in touch",
     "paragraphs": [
@@ -123,16 +216,13 @@
         "text": "If you want to join Ethicode or contribute in any way, we are always looking for purposeful people to collaborate with. Feel free to send in your resume. Skills and experience are important but Ethicode is most interested in your passions. What makes you tick? What inspires you?"
       },
       {
-        "text": "Email: ",
-        "email": "ethicode@ethicode.org"
-      },
-      {
-        "text": "Instagram: ",
-        "links": [
-          {
-            "linkText": "instagram.com/ethicodeorg",
-            "url": "https://www.instagram.com/ethicodeorg/"
-          }
+        "text": "Reach us here:",
+        "socials": [
+          "mailto:ethicode@ethicode.org",
+          "https://www.instagram.com/ethicodeorg/",
+          "https://www.facebook.com/ethicodeorg",
+          "https://www.linkedin.com/company/ethicode/",
+          "https://twitter.com/ethicodeorg"
         ]
       }
     ]

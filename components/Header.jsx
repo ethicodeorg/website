@@ -1,11 +1,14 @@
 import React from 'react';
+import { useRouter } from 'next/router';
 import Link from 'next/link';
 import classNames from 'classnames';
 import theme from '../styles/theme';
 
-const Header = ({ currentPage }) => {
-  const darkPages = ['AboutPage', 'Index', 'Error'];
-  const isDark = darkPages.includes(currentPage);
+const Header = () => {
+  const router = useRouter();
+  const activePage = router.pathname;
+  const darkPages = ['/about', '/team', '/'];
+  const isDark = darkPages.includes(activePage);
 
   return (
     <div className="menu-main">
@@ -18,28 +21,37 @@ const Header = ({ currentPage }) => {
           />
         </a>
       </Link>
-      <Link href="/about">
-        <a
-          className={classNames('menu-item', {
-            'menu-item-active': currentPage === 'AboutPage',
-          })}
-        >
-          About
-        </a>
-      </Link>
       <Link href="/work">
         <a
           className={classNames('menu-item', {
-            'menu-item-active': currentPage === 'WorkPage',
+            'menu-item-active': activePage === '/work',
           })}
         >
           Work
         </a>
       </Link>
+      <Link href="/about">
+        <a
+          className={classNames('menu-item', {
+            'menu-item-active': activePage === '/about',
+          })}
+        >
+          About
+        </a>
+      </Link>
+      <Link href="/team">
+        <a
+          className={classNames('menu-item', {
+            'menu-item-active': activePage === '/team',
+          })}
+        >
+          Team
+        </a>
+      </Link>
       <Link href="/contact">
         <a
           className={classNames('menu-item', {
-            'menu-item-active': currentPage === 'ContactPage',
+            'menu-item-active': activePage === '/contact',
           })}
         >
           Contact
