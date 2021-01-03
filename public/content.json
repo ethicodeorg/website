@@ -200,6 +200,12 @@
           "https://instagram.com/nutrizionechevale",
           "https://instagram.com/caldivale"
         ]
+      },
+      {
+        "name": "Wyatt Beere",
+        "title": "Content Writer",
+        "img": "wyatt.png",
+        "networks": ["https://instagram.com/wyattbeere"]
       }
     ]
   },

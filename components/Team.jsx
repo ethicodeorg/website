@@ -18,6 +18,7 @@ const Team = () => {
           Ethicode is a team of <span className="passion">passionate volunteers</span> who share a{' '}
           <span className="vision">common vision</span> of a{' '}
           <span className="compassion">more compassionate</span> future.
+          <div className="subsubtitle">Here are some of us.</div>
         </div>
       </FadeInBottom>
       <div className="team">
@@ -72,6 +73,9 @@ const Team = () => {
           font-size: 24px;
           font-style: italic;
           color: ${theme.colors.lightText};
+        }
+        .subsubtitle {
+          margin-top: 10px;
         }
         .passion {
           color: ${theme.colors.pink};
