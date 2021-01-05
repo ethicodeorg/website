@@ -169,6 +169,12 @@
         ]
       },
       {
+        "name": "Laura Brown",
+        "title": "Content writer",
+        "img": "laura.png",
+        "networks": []
+      },
+      {
         "name": "Marina Baptista Rosa",
         "title": "Translator",
         "img": "marina.png",
@@ -177,12 +183,6 @@
           "https://www.linkedin.com/in/marina-baptista-rosa/",
           "https://instagram.com/marina.vbr"
         ]
-      },
-      {
-        "name": "Laura Brown",
-        "title": "Content writer",
-        "img": "laura.png",
-        "networks": []
       },
       {
         "name": "Panagiota Alamaniotou",
