@@ -46,7 +46,9 @@ const Team = () => {
                         url={network}
                         target="_blank"
                         bgColor={
-                          network.includes('mailto') || network.includes('carlosmarquezperez')
+                          network.includes('mailto') ||
+                          network.includes('carlosmarquezperez.com') ||
+                          network.includes('laurabrown.uk')
                             ? theme.colors.pink
                             : ''
                         }

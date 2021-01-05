@@ -172,7 +172,7 @@
         "name": "Laura Brown",
         "title": "Content writer",
         "img": "laura.png",
-        "networks": []
+        "networks": ["https://www.laurabrown.uk/", "https://instagram.com/lauraabroown"]
       },
       {
         "name": "Marina Baptista Rosa",
