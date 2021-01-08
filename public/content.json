@@ -194,6 +194,12 @@
         ]
       },
       {
+        "name": "Samantha Frey",
+        "title": "Quality Analyst",
+        "img": "sam.png",
+        "networks": ["https://www.instagram.com/vegan_kitchen_alchemist/"]
+      },
+      {
         "name": "Valentina Caldart",
         "title": "Content Writer & Quality Analyst",
         "img": "valentina.png",
