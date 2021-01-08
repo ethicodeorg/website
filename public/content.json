@@ -163,9 +163,16 @@
         "title": "Translator",
         "img": "juliette.png",
         "networks": [
+          "mailto:forestjuliette@tutanota.com",
           "https://www.linkedin.com/in/juliette-forest/",
           "https://instagram.com/ptitcrocro"
         ]
+      },
+      {
+        "name": "Laura Brown",
+        "title": "Content writer",
+        "img": "laura.png",
+        "networks": ["https://www.laurabrown.uk/", "https://instagram.com/lauraabroown"]
       },
       {
         "name": "Marina Baptista Rosa",
@@ -185,6 +192,12 @@
           "https://www.linkedin.com/in/panagiota-alamaniotou-004964176/",
           "https://instagram.com/giotaalamaniotou"
         ]
+      },
+      {
+        "name": "Samantha Frey",
+        "title": "Quality Analyst",
+        "img": "sam.png",
+        "networks": ["https://www.instagram.com/vegan_kitchen_alchemist/"]
       },
       {
         "name": "Valentina Caldart",
