@@ -1,9 +1,18 @@
 import Head from 'next/head';
-import React from 'react';
+import {useEffect, React} from 'react';
 import Header from '../components/Header';
 import theme from '../styles/theme';
+import { initGA, logPageView } from './utils/analytics';
 
 export default function Layout({ children, title = 'Ethicode' }) {
+  useEffect(() => {
+    if (!window.GA_INITIALIZED) {
+      initGA();
+      window.GA_INITIALIZED = true;
+    }
+    logPageView();
+  });
+  
   return (
     <div>
       <Head>
