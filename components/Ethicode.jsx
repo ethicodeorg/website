@@ -1,9 +1,11 @@
 import theme from '../styles/theme';
 import FadeInBottom from './FadeInBottom';
+import MainTitle from './MainTitle';
 
 const Ethicode = () => {
   return (
     <div className="vision">
+      <MainTitle title="Our vision" isDark isTop />
       <FadeInBottom duration={1}>
         <h2 className="visionContent pink">For a world</h2>
       </FadeInBottom>
@@ -23,8 +25,7 @@ const Ethicode = () => {
 
       <style jsx scoped>{`
         .vision {
-          height: 100vh;
-          padding: 0 20px;
+          padding: 0 20px 100px;
         }
         .visionContent {
           font-style: italic;
@@ -32,7 +33,7 @@ const Ethicode = () => {
           text-align: left;
         }
         h2 {
-          padding-top: 33vh;
+          padding-top: 100px;
         }
         h2,
         h3 {
@@ -88,7 +89,7 @@ const Ethicode = () => {
 
         @media screen and (min-width: 800px) {
           .vision {
-            padding: 0 45px;
+            padding: 0 45px 200px;
           }
           h2 {
             font-size: 112px;
@@ -106,8 +107,8 @@ const Ethicode = () => {
 
         @media screen and (min-width: 1200px) {
           h2 {
-            font-size: 172px;
-            line-height: 156px;
+            font-size: 130px;
+            line-height: 120px;
           }
           h3 {
             font-size: 80px;

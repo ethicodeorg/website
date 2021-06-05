@@ -2,12 +2,12 @@ import content from '../public/content.json';
 import Content from './Content';
 import MainTitle from './MainTitle';
 
-const Work = () => {
+const Work = ({ isTop }) => {
   const workContent = content.Work;
 
   return (
     <section id="work">
-      <MainTitle title={workContent.mainTitle} />
+      <MainTitle title={workContent.mainTitle} isTop={isTop} />
 
       <div className="work">
         {workContent.paragraphs.map((paragraph, iP) => (

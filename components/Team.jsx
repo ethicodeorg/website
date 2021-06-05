@@ -12,13 +12,21 @@ const Team = () => {
 
   return (
     <section id="team">
-      <MainTitle title={teamContent.mainTitle} isDark />
+      <MainTitle title={teamContent.mainTitle} isDark isTop />
       <FadeInBottom duration={0.7}>
         <div className="subtitle">
-          Ethicode is a team of <span className="passion">passionate volunteers</span> who share a{' '}
-          <span className="vision">common vision</span> of a{' '}
-          <span className="compassion">more compassionate</span> future.
-          <div className="subsubtitle">Here are some of us.</div>
+          <p className="subsubtitle">
+            Ethicode was founded in 2020 as a <span className="blue">non-profit</span> organization
+            around the side projects of its founder, Atli Sævar. Soon after,{' '}
+            <span className="pink">passionate</span> volunteers joined the team, who believed in the
+            mission.
+          </p>
+          <p className="subsubtitle">
+            We are currently in the process of converting Ethicode to a{' '}
+            <span className="yellow">for-profit</span> company so that we can start working
+            full-time on your projects as well as our own.
+          </p>
+          <p className="subsubtitle">Here are some of us.</p>
         </div>
       </FadeInBottom>
       <div className="team">
@@ -70,22 +78,25 @@ const Team = () => {
           text-align: left;
         }
         .subtitle {
-          max-width: 1200px;
-          margin: 20px auto;
+          display: flex;
+          flex-wrap: wrap;
+          margin: 20px 0;
           font-size: 24px;
           font-style: italic;
           color: ${theme.colors.lightText};
+          text-align: right;
         }
         .subsubtitle {
-          margin-top: 10px;
+          width: 100%;
+          text-align: left;
         }
-        .passion {
+        .pink {
           color: ${theme.colors.pink};
         }
-        .vision {
+        .yellow {
           color: ${theme.colors.yellow};
         }
-        .compassion {
+        .blue {
           color: ${theme.colors.blue};
         }
         .team {
@@ -139,6 +150,13 @@ const Team = () => {
         }
 
         @media screen and (min-width: 800px) {
+          .subsubtitle {
+            width: calc(50% - 50px);
+            padding-right: 50px;
+          }
+          .subsubtitle:nth-child(2n) {
+            padding-top: 50px;
+          }
           .team {
             width: calc(100% + 50px);
             margin: 0 -25px;

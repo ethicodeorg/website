@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="1990px" height="388px" viewBox="0 0 1990 388" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>Slice</title>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Light" transform="translate(-233.000000, -1021.000000)">
+            <circle id="Oval" stroke="#222222" stroke-width="50" fill-opacity="0" fill="#D8D8D8" cx="1217" cy="1217" r="1141"></circle>
+            <circle id="Oval" fill="#111111" cx="1514.5" cy="1263.5" r="105.5"></circle>
+            <text id="Ethicode" font-family="Righteous-Regular, Righteous" font-size="500" font-weight="normal">
+                <tspan x="207" y="1399" fill="#111111">Ethic</tspan>
+                <tspan x="1371.0625" y="1399" fill="#00BCD4">o</tspan>
+                <tspan x="1660.61328" y="1399" fill="#111111">de</tspan>
+            </text>
+            <circle id="Oval" fill="#EEEEEE" cx="1559" cy="1228" r="33"></circle>
+        </g>
+    </g>
+</svg>

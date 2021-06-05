@@ -5,7 +5,6 @@ const FadeInBottom = ({ children, duration, animation = 'fadeInUp', offset = 100
     <ScrollAnimation
       animateIn={animation}
       animatePreScroll={true}
-      animateOnce={true}
       duration={duration}
       offset={offset}
       delay={delay}

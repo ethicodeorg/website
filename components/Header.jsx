@@ -15,7 +15,7 @@ const Header = () => {
       <Link href="/">
         <a className="menu-item menu-item-first">
           <img
-            src={`/ethicode-logo-${isDark ? 'white' : 'black'}.png`}
+            src={`/ethilogo-on-${isDark ? 'black' : 'white'}.svg`}
             alt="ethicode-logo"
             className="logo"
           />
@@ -46,15 +46,6 @@ const Header = () => {
           })}
         >
           Team
-        </a>
-      </Link>
-      <Link href="/contact">
-        <a
-          className={classNames('menu-item', {
-            'menu-item-active': activePage === '/contact',
-          })}
-        >
-          Contact
         </a>
       </Link>
 

@@ -1,7 +1,7 @@
 import theme from '../styles/theme';
 import FadeInBottom from './FadeInBottom';
 
-const MainTitle = ({ title, isDark }) => {
+const MainTitle = ({ title, isDark, isTop }) => {
   return (
     <h2 className="main-title">
       <FadeInBottom duration={1}>{title}</FadeInBottom>
@@ -9,7 +9,7 @@ const MainTitle = ({ title, isDark }) => {
       <style jsx>{`
         .main-title {
           max-width: 1200px;
-          padding-top: 100px;
+          padding-top: ${isTop ? '100px' : '40px'};
           margin: 0 auto;
           font-size: 36px;
           text-align: left;
@@ -19,7 +19,7 @@ const MainTitle = ({ title, isDark }) => {
 
         @media screen and (min-width: 600px) {
           .main-title {
-            padding-top: 160px;
+            padding-top: ${isTop ? '160px' : '40px'};
             font-size: 48px;
             line-height: 100px;
           }
@@ -34,7 +34,7 @@ const MainTitle = ({ title, isDark }) => {
 
         @media screen and (min-width: 1200px) {
           .main-title {
-            font-size: 104px;
+            font-size: 72px;
             line-height: 120px;
           }
         }

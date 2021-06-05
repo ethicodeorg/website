@@ -43,7 +43,7 @@
       {
         "title": "Who",
         "titleRotate": "120",
-        "text": "We are a team of volunteers inspired to find new ways to advocate for animals.",
+        "text": "We are a team of inspired individuals working on new and effective ways to advocate for human and non-human animal rights.",
         "route": {
           "text": "Meet the team",
           "route": "/team"
@@ -52,7 +52,7 @@
       {
         "title": "What we love",
         "titleRotate": "200",
-        "text": "We love asking questions and initiating discussions about stuff that interests us. We love flexing different muscles and chasing our inspiration. We love communicating with the truth because life is short and we don't wanna spend any of it on bullshit."
+        "text": "We love getting down to the thick of it where we can have meaningful impact and get cracking. We love communicating with the truth because life is short and we don't wanna spend any of it on bullshit."
       }
     ]
   },
@@ -61,48 +61,39 @@
     "mainTitle": "Featured",
     "paragraphs": [
       {
+        "image": {
+          "img": "food.e.png",
+          "mobileImg": "mobile-food.e.png",
+          "name": "food·e",
+          "link": "https://foodprintcalculator.com/"
+        }
+      },
+      {
         "title": "FOOD·E",
-        "smallText": "Released in May 2020, FOOD·E provides the technology that allows meal creators of all kinds and sizes to evaluate their recipes' environmental impact and display the results for their consumers. Built with Next.js and MongoDB.",
+        "smallText": "FOOD·E is helping food professionals to educate their customers about sustainable food choices.",
         "links": [
           {
             "linkText": "foodprintcalculator.com",
             "url": "https://foodprintcalculator.com/"
           }
-        ],
-        "image": {
-          "img": "food.e.png",
-          "mobileImg": "mobile-food.e.png",
-          "name": "food·e"
-        }
-      },
-      {
-        "title": "Ethicode.org",
-        "smallText": "The Ethicode homepage (this website) was released in March 2020. Built with Vue.js.",
-        "links": [
-          {
-            "linkText": "ethicode.org",
-            "url": "http://ethicode.org"
-          }
-        ],
-        "image": {
-          "img": "ethicodeorg.png",
-          "mobileImg": "mobile-ethicodeorg.png",
-          "name": "ethicode"
-        }
+        ]
       },
       {
         "title": "VeganBot",
-        "smallText": "VeganBot provides answers to frequently asked questions about veganism, as well as counter arguments for common justifications for animal abuse. The aim is to educate and train people in the vegan conversation, so that veganism can spread even faster. Released in May 2018, the client was built with TypeScript/Angular.js, the server with Node.js and then some Python scripts to gather the content.",
+        "smallText": "VeganBot is educating and training people in the vegan conversation.",
         "links": [
           {
             "linkText": "veganbot.com",
             "url": "http://veganbot.com"
           }
-        ],
+        ]
+      },
+      {
         "image": {
           "img": "veganbotpic.png",
           "mobileImg": "mobile-veganbotpic.png",
-          "name": "veganbot"
+          "name": "veganbot",
+          "link": "http://veganbot.com"
         }
       }
     ]
@@ -124,8 +115,7 @@
         "networks": [
           "mailto:atli@ethicode.org",
           "https://linkedin.com/in/atlisaevar",
-          "https://instagram.com/atlisaevar",
-          "https://facebook.com/atlisaevar"
+          "https://instagram.com/atlisaevar"
         ]
       },
       {
@@ -206,8 +196,7 @@
         "networks": [
           "mailto:valecaldi94@gmail.com",
           "https://www.linkedin.com/in/valentinacaldart/",
-          "https://instagram.com/caldivale",
-          "https://www.facebook.com/valentina.caldart"
+          "https://instagram.com/caldivale"
         ]
       },
       {
@@ -223,17 +212,23 @@
     "mainTitle": "Get in touch",
     "paragraphs": [
       {
-        "text": "Now is the time to build something new. Drop us a line if you have a brilliant idea that needs to be implemented and shared with the world."
+        "text": "If you're looking for an ethical choice to develop your project and share with the world, we're happy to talk."
       },
       {
-        "text": "If you want to join Ethicode or contribute in any way, we are always looking for purposeful people to collaborate with. Feel free to send in your resume. Skills and experience are important but Ethicode is most interested in your passions. What makes you tick? What inspires you?"
+        "text": "To get started, send us a brief description of your project and we'll start exploring the next steps. Let's spread some love together!"
       },
       {
-        "text": "Reach us here:",
+        "links": [
+          {
+            "linkText": "ethicode@ethicode.org",
+            "url": "mailto:ethicode@ethicode.org"
+          }
+        ]
+      },
+      {
         "socials": [
           "mailto:ethicode@ethicode.org",
           "https://www.instagram.com/ethicodeorg/",
-          "https://www.facebook.com/ethicodeorg",
           "https://www.linkedin.com/company/ethicode/",
           "https://twitter.com/ethicodeorg"
         ]
