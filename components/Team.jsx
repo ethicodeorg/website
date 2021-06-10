@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import React, { useState } from 'react';
 import classNames from 'classnames';
 import { SocialIcon } from 'react-social-icons';
@@ -16,15 +17,22 @@ const Team = () => {
       <FadeInBottom duration={0.7}>
         <div className="subtitle">
           <p className="subsubtitle">
-            Ethicode was founded in 2020 as a <span className="blue">non-profit</span> organization
-            around the side projects of its founder, Atli Sævar. Soon after,{' '}
-            <span className="pink">passionate</span> volunteers joined the team who believed in the
-            mission.
+            Ethicode was founded in 2020 around the side projects of its founder, Atli Sævar. Soon
+            after, <span className="pink">passionate</span> volunteers joined the team who believed
+            in the{' '}
+            <Link href="/about">
+              <a className="link">mission</a>
+            </Link>
+            .
           </p>
           <p className="subsubtitle">
-            We are currently in the process of converting Ethicode to a{' '}
-            <span className="yellow">for-profit</span> company so that we can start working
-            full-time on your projects as well as our own.
+            We are currently in the process of shifting Ethicode's focus more towards working for
+            paying <span className="yellow">clients</span> so that we can start working full-time on
+            the{' '}
+            <Link href="/about">
+              <a className="link">mission</a>
+            </Link>{' '}
+            wheather it's on your projects or our own.
           </p>
           <p className="subsubtitle">Here are some of us.</p>
         </div>
@@ -147,6 +155,10 @@ const Team = () => {
         }
         .social:hover {
           transform: scale(1.1);
+        }
+        .link {
+          text-decoration: none;
+          color: ${theme.colors.blue};
         }
 
         @media screen and (min-width: 800px) {
