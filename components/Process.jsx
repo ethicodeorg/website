@@ -14,7 +14,7 @@ const Process = () => {
           <JourneyCard
             topIcon={<FaEye color={theme.colors.pink} />}
             title="Discover"
-            text="The meeting of the minds is the baseline for everything. We want to feel inspired when working for your mission so it’s important that it aligns with"
+            text="The meeting of the minds is the baseline for everything. We want to feel inspired when working for your mission, so it’s crucial that it aligns with"
             link={{
               href: '/about',
               text: ' ours.',
@@ -25,21 +25,21 @@ const Process = () => {
           <JourneyCard
             topIcon={<FaPencilAlt color={theme.colors.blue} />}
             title="Estimate"
-            text="As we fully get to understand your problem we can reach an agreement on cost and time of delivery. We won’t over charge or over promise but we might over deliver."
+            text="As we fully understand your problem we can reach an agreement on cost and time of delivery. We won’t over-charge or over-promise, but we might over-deliver."
           />
         </FadeInBottom>
         <FadeInBottom duration={0.9}>
           <JourneyCard
             topIcon={<FaRuler color={theme.colors.pink} />}
             title="Design"
-            text="Before we start coding, we design everything, the visuals, the user experience, the functionality and the structure of the application."
+            text="Before we start coding, we design everything – the visuals, the user experience, the functionality, and the structure of the application."
           />
         </FadeInBottom>
         <FadeInBottom duration={1.1}>
           <JourneyCard
             topIcon={<FaCogs color={theme.colors.blue} />}
             title="Build"
-            text="Whilst bringing your vision to reality, our developers can be reached at any time to discuss any details or get updates on the progress."
+            text="While bringing your vision to reality, you can frequently communicate with our developers to discuss any details or updates on the progress."
           />
         </FadeInBottom>
         <FadeInBottom duration={1.3}>

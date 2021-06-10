@@ -22,7 +22,7 @@ const FrontPage = () => {
             to scale your impact and propel your
             <span className="accent yellow"> mission</span>
           </div>
-          towards a more <span className="accent blue"> ethical </span> universe.
+          towards a more <span className="accent blue"> ethical </span> being.
         </h4>
       </div>
       <div className="vegan">
@@ -50,7 +50,7 @@ const FrontPage = () => {
 
       <style jsx scoped>{`
         .frontpage {
-          height: 450px;
+          height: 500px;
           padding: 33vh 20px 0;
           background-color: ${theme.colors.lightText};
         }
@@ -556,13 +556,13 @@ const FrontPage = () => {
 
         @-webkit-keyframes veganslide {
           100% {
-            top: 80%;
+            top: 90%;
             right: 10%;
           }
         }
         @keyframes veganslide {
           100% {
-            top: 80%;
+            top: 90%;
             right: 10%;
           }
         }

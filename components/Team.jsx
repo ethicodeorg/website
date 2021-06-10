@@ -18,7 +18,7 @@ const Team = () => {
           <p className="subsubtitle">
             Ethicode was founded in 2020 as a <span className="blue">non-profit</span> organization
             around the side projects of its founder, Atli Sævar. Soon after,{' '}
-            <span className="pink">passionate</span> volunteers joined the team, who believed in the
+            <span className="pink">passionate</span> volunteers joined the team who believed in the
             mission.
           </p>
           <p className="subsubtitle">
