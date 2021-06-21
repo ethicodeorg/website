@@ -14,11 +14,7 @@ const Process = () => {
           <JourneyCard
             topIcon={<FaEye color={theme.colors.pink} />}
             title="Discover"
-            text="The meeting of the minds is the baseline for everything. We want to feel inspired when working for your mission, so it’s crucial that it aligns with"
-            link={{
-              href: '/about',
-              text: ' ours.',
-            }}
+            text="The meeting of the minds is the baseline for everything. We want to feel inspired when working for your mission, so it’s crucial that it aligns with ours."
           />
         </FadeInBottom>
         <FadeInBottom duration={0.7}>

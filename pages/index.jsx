@@ -1,21 +1,15 @@
 import { Fragment } from 'react';
+import About from '../components/About';
 import Contact from '../components/Contact';
 import FrontPage from '../components/FrontPage';
-import Work from '../components/Work';
 import PageContainer from '../components/PageContainer';
-import Process from '../components/Process';
 
 export default function Index() {
   return (
     <Fragment>
-      <div className="ethicode">
-        <FrontPage />
-      </div>
-      <PageContainer>
-        <Process />
-      </PageContainer>
-      <PageContainer>
-        <Work />
+      <FrontPage />
+      <PageContainer isDark>
+        <About />
       </PageContainer>
       <PageContainer isDark>
         <Contact />

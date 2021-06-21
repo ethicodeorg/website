@@ -18,21 +18,13 @@ const Team = () => {
         <div className="subtitle">
           <p className="subsubtitle">
             Ethicode was founded in 2020 around the side projects of its founder, Atli Sævar. Soon
-            after, <span className="pink">passionate</span> volunteers joined the team who believed
-            in the{' '}
-            <Link href="/about">
-              <a className="link">mission</a>
-            </Link>
-            .
+            after, <span className="blue">passionate</span> volunteers joined the team who believed
+            in the <span className="pink">mission</span>.
           </p>
           <p className="subsubtitle">
-            We are currently in the process of shifting Ethicode's focus more towards working for
-            paying <span className="yellow">clients</span> so that we can start working full-time on
-            the{' '}
-            <Link href="/about">
-              <a className="link">mission</a>
-            </Link>{' '}
-            wheather it's on your projects or our own.
+            We are currently in the process of expanding Ethicode's impact by taking on like-minded{' '}
+            <span className="yellow">clients</span> so that we can work full-time on the{' '}
+            <span className="pink">mission</span>, wheather it's on your projects or our own.
           </p>
           <p className="subsubtitle">Here are some of us.</p>
         </div>

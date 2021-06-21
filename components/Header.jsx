@@ -7,7 +7,7 @@ import theme from '../styles/theme';
 const Header = () => {
   const router = useRouter();
   const activePage = router.pathname;
-  const darkPages = ['/about', '/team', '/'];
+  const darkPages = ['/team', '/', '/studio', '/innovate'];
   const isDark = darkPages.includes(activePage);
 
   return (
@@ -21,22 +21,22 @@ const Header = () => {
           />
         </a>
       </Link>
-      <Link href="/work">
+      <Link href="/studio">
         <a
           className={classNames('menu-item', {
-            'menu-item-active': activePage === '/work',
+            'menu-item-active': activePage === '/studio',
           })}
         >
-          Work
+          Studio
         </a>
       </Link>
-      <Link href="/about">
+      <Link href="/innovate">
         <a
           className={classNames('menu-item', {
-            'menu-item-active': activePage === '/about',
+            'menu-item-active': activePage === '/innovate',
           })}
         >
-          About
+          Innovate
         </a>
       </Link>
       <Link href="/team">

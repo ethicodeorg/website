@@ -64,7 +64,7 @@ const Content = ({ paragraph, isDark, isFooter, useSteps }) => {
                 <SocialIcon
                   url={network}
                   target="_blank"
-                  style={{ height: 70, width: 70 }}
+                  style={{ height: isBreakpoint ? 50 : 70, width: isBreakpoint ? 50 : 70 }}
                   bgColor={iN === 0 ? theme.colors.pink : ''}
                 />
               </FadeInBottom>

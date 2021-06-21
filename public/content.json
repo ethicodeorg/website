@@ -58,8 +58,12 @@
   },
 
   "Work": {
-    "mainTitle": "Featured",
+    "mainTitle": "Featured work",
     "paragraphs": [
+      {
+        "text": "Below are some of our creations."
+      },
+      {},
       {
         "image": {
           "img": "food.e.png",
@@ -212,12 +216,13 @@
     "mainTitle": "Get in touch",
     "paragraphs": [
       {
-        "text": "If you're looking for an ethical choice to develop your project and share with the world, we're happy to talk."
+        "text": "If you're looking for an ethical choice to develop your project and share with the world, we're happy to talk. To get started, send us a brief description of your project, and we'll start exploring the next steps."
       },
       {
-        "text": "To get started, send us a brief description of your project, and we'll start exploring the next steps. Let's spread some love together!"
+        "text": "If you want to join the team and contribute to our projects or create new ones, we are always looking to expand our purposeful group of people. To get started, send us your resume along with a message expressing 1) what inspires you, and 2) what skills or ideas would you like to bring to the team."
       },
       {
+        "text": "Let's spread some love together!",
         "links": [
           {
             "linkText": "ethicode@ethicode.org",

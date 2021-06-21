@@ -25,7 +25,7 @@ const Ethicode = () => {
 
       <style jsx scoped>{`
         .vision {
-          padding: 0 20px 100px;
+          padding: 0 0 100px;
         }
         .visionContent {
           font-style: italic;

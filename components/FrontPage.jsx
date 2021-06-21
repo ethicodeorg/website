@@ -1,618 +1,230 @@
-import { FaCheck, FaChevronDown, FaMouse } from 'react-icons/fa';
+import Link from 'next/link';
 import theme from '../styles/theme';
+import FadeInBottom from './FadeInBottom';
 
 const FrontPage = () => {
   return (
     <div className="frontpage">
-      <div className="eyeball">
-        <div className="bigball" />
-        <div className="ball" />
-        <div className="smallball" />
-      </div>
-      <div className="headline">
-        <h2>
-          <div>Custom software</div>
-          <div>development studio.</div>
-        </h2>
-        <h4>
-          We create
-          <span className="accent pink"> tailor-made </span>
-          web & mobile applications
-          <div>
-            to scale your impact and propel your
-            <span className="accent yellow"> mission</span>
-          </div>
-          towards a more <span className="accent blue"> ethical </span> being.
-        </h4>
-      </div>
-      <div className="vegan">
-        Pssst.. yes, we are vegan
-        <div className="check">
-          <FaCheck />
-        </div>
-      </div>
-      <div className="scroll">
-        <div className="mouse">
-          <FaMouse />
-        </div>
-        <div className="arrows">
-          <div className="arrow arrow1">
-            <FaChevronDown />
-          </div>
-          <div className="arrow arrow2">
-            <FaChevronDown />
-          </div>
-          <div className="arrow arrow3">
-            <FaChevronDown />
+      <div className="divider">
+        <div className="studio">
+          <div className="content">
+            <FadeInBottom animation="rotateIn" duration={4}>
+              <div className="icon-container">
+                <img className="logo" src="/eye.svg" />
+              </div>
+            </FadeInBottom>
+            <FadeInBottom>
+              <h3>Software Studio</h3>
+              <div className="text-container">
+                <p>Custom web & mobile applications</p>
+                <p>to scale your impact and propel your mission</p>
+                <p>towards a more ethical future.</p>
+              </div>
+            </FadeInBottom>
+            <div className="sparkle">
+              <FadeInBottom animation="rotateIn" delay={200}>
+                <Link href="/studio">
+                  <a className="button">Learn more</a>
+                </Link>
+              </FadeInBottom>
+            </div>
           </div>
         </div>
+        <div className="innovate">
+          <div className="content">
+            <FadeInBottom animation="rotateIn" delay={500} duration={4}>
+              <div className="icon-container">
+                <img className="logo" src="/eye.svg" />
+              </div>
+            </FadeInBottom>
+            <FadeInBottom delay={200}>
+              <h3>Innovation Center</h3>
+              <div className="text-container">
+                <p>A safe space for new ideas to be born and fostered</p>
+                <p>that serve our mission – to educate, raise awareness,</p>
+                <p>and promote fairness towards all animal species.</p>
+              </div>
+            </FadeInBottom>
+            <div className="sparkle sparkle-innovate">
+              <FadeInBottom animation="rotateIn" delay={400}>
+                <Link href="/innovate">
+                  <a className="button">Learn more</a>
+                </Link>
+              </FadeInBottom>
+            </div>
+          </div>
+        </div>
       </div>
-
       <style jsx scoped>{`
         .frontpage {
-          height: 500px;
-          padding: 33vh 20px 0;
-          background-color: ${theme.colors.lightText};
         }
-        .eyeball {
-          z-index: -1;
+        .divider {
+          display: flex;
+          flex-direction: column;
+          padding: 65px 0 0;
         }
-        .bigball,
-        .ball,
-        .smallball {
-          position: absolute;
-          border-radius: 100%;
-        }
-        .bigball {
-          top: 400px;
-          left: 400px;
-          height: 350px;
-          width: 350px;
-          background-color: ${theme.colors.blue};
-          overflow: hidden;
-          -webkit-animation: bigslide 1.5s forwards;
-          animation: bigslide 1.5s forwards;
-        }
-        .ball {
-          top: 40px;
-          left: 400px;
-          height: 240px;
-          width: 240px;
+        .content {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: space-around;
+          height: 90vw;
+          width: 90vw;
+          margin: 5vw auto;
+          border-radius: 50%;
           background-color: ${theme.colors.darkBackground};
-          -webkit-animation: mediumslide 1.5s forwards;
-          animation: mediumslide 1.5s forwards;
+          color: ${theme.colors.white};
         }
-        .smallball {
-          top: 0px;
-          left: 500px;
-          height: 50px;
-          width: 50px;
-          background-color: ${theme.colors.lightText};
-          -webkit-animation: smallslide 1.5s forwards;
-          animation: smallslide 1.5s forwards;
+        .studio {
+          display: flex;
+          background-color: ${theme.colors.yellow};
+          width: 100%;
         }
-        .headline {
-          position: absolute;
-          top: 400px;
-          left: 50px;
-          z-index: 1;
-          -webkit-animation: textslide 1.5s forwards;
-          animation: textslide 1.5s forwards;
+        .innovate {
+          display: flex;
+          background-color: ${theme.colors.blue};
+          width: 100%;
         }
-        .vegan {
-          position: absolute;
-          right: -200px;
-          top: 100%;
+        .icon-container {
           display: flex;
           justify-content: center;
-          padding: 10px;
-          border-radius: 50px;
+          font-size: 48px;
+          color: ${theme.colors.pink};
+        }
+        .logo {
+          width: 30px;
+          height: 30px;
+        }
+        .sparkle {
+          position: absolute;
+          top: calc(65px + 7vw);
+          left: calc(100% - 32vw);
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          height: 25vw;
+          width: 25vw;
+          border-radius: 50%;
+          background-color: ${theme.colors.white};
+        }
+        .sparkle-innovate {
+          top: calc(65px + 107vw);
+          left: calc(100% - 32vw);
+        }
+        .button {
+          text-decoration: none;
           font-weight: bold;
-          font-style: italic;
-          font-size: 12px;
-          color: ${theme.colors.green};
-          background-color: ${theme.colors.background};
-          -webkit-animation: veganslide 1.5s forwards;
-          animation: veganslide 1.5s forwards;
-        }
-        .check {
-          margin-left: 5px;
-        }
-        h2 {
-          margin: 0 auto;
-          font-size: 22px;
-          text-align: left;
-          color: ${theme.colors.lightText};
-          z-index: 2;
-        }
-        h4 {
-          margin: 0 auto;
-          padding-top: 200px;
-          color: ${theme.colors.text};
+          color: ${theme.colors.pink};
           font-size: 14px;
-          text-align: left;
+        }
+        h3 {
+          font-size: 24px;
+          text-align: center;
+          margin: 20px 0;
+        }
+        .text-container {
+          padding-bottom: 50px;
+        }
+        p {
+          font-size: 13px;
           font-style: italic;
+          text-align: center;
+          margin: 10px 0;
         }
-        .accent {
-          font-size: 18px;
-        }
-        .pink {
-          color: ${theme.colors.pink};
-        }
-        .yellow {
-          color: ${theme.colors.green};
-        }
-        .blue {
-          color: ${theme.colors.blue};
-        }
-        .white {
-          color: ${theme.colors.lightText};
-        }
-        .scroll {
-          display: none;
-          position: absolute;
-          right: 5%;
-          top: 90%;
-          font-size: 30px;
-          color: ${theme.colors.pink};
-          -webkit-animation: mouseslide 1.5s forwards;
-          animation: mouseslide 1.5s forwards;
-        }
-        .mouse {
-          color: ${theme.colors.lightGray};
-        }
-        .arrows {
-          font-size: 16px;
-          color: ${theme.colors.pink};
-        }
-        .arrow {
-          opacity: 0%;
-          height: 10px;
-          display: flex;
-          justify-content: center;
-          -webkit-animation: arrowappear 5s forwards infinite;
-          animation: arrowappear 5s forwards infinite;
-        }
-        .arrow2 {
-          animation-delay: 0.1.5s;
-        }
-        .arrow3 {
-          animation-delay: 0.2s;
+
+        @media screen and (min-width: 450px) {
+          h3 {
+            font-size: 32px;
+          }
+          p {
+            font-size: 16px;
+          }
+          .button {
+            font-size: 18px;
+          }
         }
 
         @media screen and (min-width: 600px) {
-          .frontpage {
-            height: 370px;
-            padding: 340px 250px 0;
+          .logo {
+            width: 40px;
+            height: 40px;
           }
-          .yellow {
-            color: ${theme.colors.yellow};
+          h3 {
+            font-size: 40px;
           }
-          .accent {
-            font-size: 18px;
+          p {
+            font-size: 20px;
           }
-          h2 {
-            font-size: 36px;
-          }
-          h4 {
-            padding-top: 20px;
-            color: ${theme.colors.lightText};
-            font-size: 16px;
-          }
-          .bigball,
-          .ball,
-          .smallball {
-            position: absolute;
-          }
-          .bigball {
-            top: 400px;
-            left: 400px;
-            height: 650px;
-            width: 650px;
-            -webkit-animation: bigslide600 1.5s forwards;
-            animation: bigslide600 1.5s forwards;
-          }
-          .ball {
-            top: 40px;
-            left: 400px;
-            height: 400px;
-            width: 400px;
-            -webkit-animation: mediumslide600 1.5s forwards;
-            animation: mediumslide600 1.5s forwards;
-          }
-          .smallball {
-            top: 0px;
-            left: 500px;
-            height: 80px;
-            width: 80px;
-            -webkit-animation: smallslide600 1.5s forwards;
-            animation: smallslide600 1.5s forwards;
-          }
-          .headline {
-            top: 150px;
-            left: 50px;
-            -webkit-animation: textslide600 1.5s forwards;
-            animation: textslide600 1.5s forwards;
-          }
-          .vegan {
-            -webkit-animation: veganslide800 1.5s forwards;
-            animation: veganslide800 1.5s forwards;
-          }
-          .scroll {
-            display: block;
+          .button {
+            font-size: 22px;
           }
         }
 
         @media screen and (min-width: 800px) {
-          .frontpage {
-            height: 370px;
-            padding: 340px 250px 0;
+          .divider {
+            flex-direction: row;
+            padding: 90px 0 0;
           }
-          .accent {
-            font-size: 24px;
+          .studio {
+            width: 50vw;
+            height: 50vw;
           }
-          h2 {
-            font-size: 48px;
+          .innovate {
+            width: 50vw;
+            height: 50vw;
           }
-          h4 {
-            padding-top: 20px;
-            color: ${theme.colors.lightText};
+          .content {
+            margin: 2.5vw auto;
+            height: 45vw;
+            width: 45vw;
+          }
+          .sparkle {
+            top: calc(90px + 3.5vw);
+            left: 34vw;
+            height: 12vw;
+            width: 12vw;
+          }
+          .sparkle-innovate {
+            top: calc(90px + 3.5vw);
+            left: 84vw;
+          }
+          .text-container {
+            padding-bottom: 50px;
+          }
+          h3 {
+            font-size: 32px;
+            margin: 30px 0;
+          }
+          p {
+            font-size: 14px;
+          }
+          .button {
+            font-size: 16px;
+          }
+        }
+
+        @media screen and (min-width: 1000px) {
+          h3 {
+            font-size: 40px;
+            margin: 30px 0;
+          }
+          p {
+            font-size: 18px;
+          }
+          .button {
             font-size: 20px;
-          }
-          .bigball,
-          .ball,
-          .smallball {
-            position: absolute;
-          }
-          .bigball {
-            top: 400px;
-            left: 400px;
-            height: 850px;
-            width: 850px;
-            -webkit-animation: bigslide800 1.5s forwards;
-            animation: bigslide800 1.5s forwards;
-          }
-          .ball {
-            top: 40px;
-            left: 400px;
-            height: 500px;
-            width: 500px;
-            -webkit-animation: mediumslide800 1.5s forwards;
-            animation: mediumslide800 1.5s forwards;
-          }
-          .smallball {
-            top: 0px;
-            left: 500px;
-            height: 100px;
-            width: 100px;
-            -webkit-animation: smallslide800 1.5s forwards;
-            animation: smallslide800 1.5s forwards;
-          }
-          .headline {
-            top: 150px;
-            left: 50px;
-            -webkit-animation: textslide800 1.5s forwards;
-            animation: textslide800 1.5s forwards;
-          }
-          .vegan {
-            -webkit-animation: veganslide800 1.5s forwards;
-            animation: veganslide800 1.5s forwards;
           }
         }
 
         @media screen and (min-width: 1200px) {
-          .frontpage {
-            height: 650px;
+          h3 {
+            font-size: 48px;
           }
-          .accent {
-            font-size: 32px;
+          p {
+            font-size: 24px;
           }
-          h2 {
-            font-size: 64px;
-          }
-          h4 {
-            padding-top: 30px;
-            font-size: 28px;
-          }
-          .bigball {
-            top: 400px;
-            left: 400px;
-            height: 1200px;
-            width: 1200px;
-            -webkit-animation: bigslide1200 1.5s forwards;
-            animation: bigslide1200 1.5s forwards;
-          }
-          .ball {
-            top: 40px;
-            left: 400px;
-            height: 700px;
-            width: 700px;
-            -webkit-animation: mediumslide1200 1.5s forwards;
-            animation: mediumslide1200 1.5s forwards;
-          }
-          .smallball {
-            top: 0px;
-            left: 500px;
-            height: 150px;
-            width: 150px;
-            -webkit-animation: smallslide1200 1.5s forwards;
-            animation: smallslide1200 1.5s forwards;
-          }
-          .headline {
-            top: 300px;
-            left: 50px;
-            -webkit-animation: textslide1200 1.5s forwards;
-            animation: textslide1200 1.5s forwards;
-          }
-        }
-
-        @-webkit-keyframes mediumslide {
-          100% {
-            top: 152px;
-            left: 5px;
-          }
-        }
-        @keyframes mediumslide {
-          100% {
-            top: 152px;
-            left: 5px;
-          }
-        }
-
-        @-webkit-keyframes mediumslide800 {
-          100% {
-            top: 120px;
-            left: 110px;
-          }
-        }
-        @keyframes mediumslide800 {
-          100% {
-            top: 120px;
-            left: 110px;
-          }
-        }
-
-        @-webkit-keyframes mediumslide600 {
-          100% {
-            top: 120px;
-            left: 65px;
-          }
-        }
-        @keyframes mediumslide600 {
-          100% {
-            top: 120px;
-            left: 65px;
-          }
-        }
-
-        @-webkit-keyframes mediumslide1200 {
-          100% {
-            top: 140px;
-            left: 190px;
-          }
-        }
-        @keyframes mediumslide1200 {
-          100% {
-            top: 140px;
-            left: 190px;
-          }
-        }
-
-        @-webkit-keyframes bigslide {
-          100% {
-            top: 100px;
-            left: -50px;
-          }
-        }
-        @keyframes bigslide {
-          100% {
-            top: 100px;
-            left: -50px;
-          }
-        }
-
-        @-webkit-keyframes bigslide600 {
-          100% {
-            top: 0px;
-            left: -60px;
-          }
-        }
-        @keyframes bigslide600 {
-          100% {
-            top: 0px;
-            left: -60px;
-          }
-        }
-
-        @-webkit-keyframes bigslide800 {
-          100% {
-            top: -40px;
-            left: -60px;
-          }
-        }
-        @keyframes bigslide800 {
-          100% {
-            top: -40px;
-            left: -60px;
-          }
-        }
-
-        @-webkit-keyframes bigslide1200 {
-          100% {
-            top: -100px;
-            left: -50px;
-          }
-        }
-        @keyframes bigslide1200 {
-          100% {
-            top: -100px;
-            left: -50px;
-          }
-        }
-
-        @-webkit-keyframes smallslide {
-          100% {
-            top: 170px;
-            left: 190px;
-          }
-        }
-        @keyframes smallslide {
-          100% {
-            top: 170px;
-            left: 190px;
-          }
-        }
-
-        @-webkit-keyframes smallslide600 {
-          100% {
-            top: 150px;
-            left: 380px;
-          }
-        }
-        @keyframes smallslide600 {
-          100% {
-            top: 150px;
-            left: 380px;
-          }
-        }
-
-        @-webkit-keyframes smallslide800 {
-          100% {
-            top: 150px;
-            left: 480px;
-          }
-        }
-        @keyframes smallslide800 {
-          100% {
-            top: 150px;
-            left: 480px;
-          }
-        }
-
-        @-webkit-keyframes smallslide1200 {
-          100% {
-            top: 170px;
-            left: 710px;
-          }
-        }
-        @keyframes smallslide1200 {
-          100% {
-            top: 170px;
-            left: 710px;
-          }
-        }
-
-        @-webkit-keyframes textslide {
-          100% {
-            top: 250px;
-            left: 24px;
-          }
-        }
-        @keyframes textslide {
-          100% {
-            top: 250px;
-            left: 24px;
-          }
-        }
-
-        @-webkit-keyframes textslide600 {
-          100% {
-            top: 230px;
-            left: 100px;
-          }
-        }
-        @keyframes textslide600 {
-          100% {
-            top: 230px;
-            left: 100px;
-          }
-        }
-
-        @-webkit-keyframes textslide800 {
-          100% {
-            top: 250px;
-            left: 150px;
-          }
-        }
-        @keyframes textslide800 {
-          100% {
-            top: 250px;
-            left: 150px;
-          }
-        }
-
-        @-webkit-keyframes textslide1200 {
-          100% {
-            top: 340px;
-            left: 250px;
-          }
-        }
-        @keyframes textslide1200 {
-          100% {
-            top: 340px;
-            left: 250px;
-          }
-        }
-
-        @-webkit-keyframes veganslide {
-          100% {
-            top: 90%;
-            right: 10%;
-          }
-        }
-        @keyframes veganslide {
-          100% {
-            top: 90%;
-            right: 10%;
-          }
-        }
-
-        @-webkit-keyframes veganslide800 {
-          100% {
-            top: 20%;
-            right: 10%;
-          }
-        }
-        @keyframes veganslide800 {
-          100% {
-            top: 20%;
-            right: 10%;
-          }
-        }
-
-        @-webkit-keyframes mouseslide {
-          100% {
-            top: 80%;
-            right: 10%;
-          }
-        }
-        @keyframes mouseslide {
-          100% {
-            top: 80%;
-            right: 10%;
-          }
-        }
-
-        @-webkit-keyframes arrowappear {
-          70% {
-            opacity: 0%;
-          }
-          90% {
-            opacity: 100%;
-          }
-          100% {
-            opacity: 0%;
-          }
-        }
-        @keyframes arrowappear {
-          70% {
-            opacity: 0%;
-          }
-          90% {
-            opacity: 100%;
-          }
-          100% {
-            opacity: 0%;
+          .button {
+            font-size: 24px;
           }
         }
       `}</style>
