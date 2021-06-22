@@ -1,6 +1,6 @@
 import Link from 'next/link';
 import theme from '../styles/theme';
-import FadeInBottom from './FadeInBottom';
+import AnimateIn from './AnimateIn';
 
 const FrontPage = () => {
   return (
@@ -8,56 +8,54 @@ const FrontPage = () => {
       <div className="divider">
         <div className="studio">
           <div className="content">
-            <FadeInBottom animation="rotateIn" duration={4}>
+            <AnimateIn animation="rotateIn" duration={4}>
               <div className="icon-container">
                 <img className="logo" src="/eye.svg" />
               </div>
-            </FadeInBottom>
-            <FadeInBottom>
+            </AnimateIn>
+            <AnimateIn>
               <h3>Software Studio</h3>
               <div className="text-container">
                 <p>Custom web & mobile applications</p>
                 <p>to scale your impact and propel your mission</p>
                 <p>towards a more ethical future.</p>
               </div>
-            </FadeInBottom>
+            </AnimateIn>
             <div className="sparkle">
-              <FadeInBottom animation="rotateIn" delay={200}>
+              <AnimateIn animation="rotateIn" delay={200}>
                 <Link href="/studio">
                   <a className="button">Learn more</a>
                 </Link>
-              </FadeInBottom>
+              </AnimateIn>
             </div>
           </div>
         </div>
         <div className="innovate">
           <div className="content">
-            <FadeInBottom animation="rotateIn" delay={500} duration={4}>
+            <AnimateIn animation="rotateIn" delay={500} duration={4}>
               <div className="icon-container">
                 <img className="logo" src="/eye.svg" />
               </div>
-            </FadeInBottom>
-            <FadeInBottom delay={200}>
+            </AnimateIn>
+            <AnimateIn delay={200}>
               <h3>Innovation Center</h3>
               <div className="text-container">
                 <p>A safe space for new ideas to be born and fostered</p>
                 <p>that serve our mission – to educate, raise awareness,</p>
                 <p>and promote fairness towards all animal species.</p>
               </div>
-            </FadeInBottom>
+            </AnimateIn>
             <div className="sparkle sparkle-innovate">
-              <FadeInBottom animation="rotateIn" delay={400}>
+              <AnimateIn animation="rotateIn" delay={400}>
                 <Link href="/innovate">
                   <a className="button">Learn more</a>
                 </Link>
-              </FadeInBottom>
+              </AnimateIn>
             </div>
           </div>
         </div>
       </div>
       <style jsx scoped>{`
-        .frontpage {
-        }
         .divider {
           display: flex;
           flex-direction: column;

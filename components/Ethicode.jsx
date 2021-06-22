@@ -1,27 +1,27 @@
 import theme from '../styles/theme';
-import FadeInBottom from './FadeInBottom';
+import AnimateIn from './AnimateIn';
 import MainTitle from './MainTitle';
 
 const Ethicode = () => {
   return (
     <div className="vision">
       <MainTitle title="Our vision" isDark isTop />
-      <FadeInBottom duration={1}>
+      <AnimateIn duration={1}>
         <h2 className="visionContent pink">For a world</h2>
-      </FadeInBottom>
-      <FadeInBottom duration={1}>
+      </AnimateIn>
+      <AnimateIn duration={1}>
         <h3 className="visionContent">
           where all
           <span className="yellow"> sentient beings</span>
         </h3>
-      </FadeInBottom>
-      <FadeInBottom duration={1.5}>
+      </AnimateIn>
+      <AnimateIn duration={1.5}>
         <h4>
           have the right to
           <span className="blue"> life</span>, <span className="blue">liberty</span>, and the
           <span className="blue"> pursuit of happiness</span>.
         </h4>
-      </FadeInBottom>
+      </AnimateIn>
 
       <style jsx scoped>{`
         .vision {

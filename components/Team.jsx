@@ -4,7 +4,7 @@ import classNames from 'classnames';
 import { SocialIcon } from 'react-social-icons';
 import content from '../public/content.json';
 import theme from '../styles/theme';
-import FadeInBottom from './FadeInBottom';
+import AnimateIn from './AnimateIn';
 import MainTitle from './MainTitle';
 
 const Team = () => {
@@ -14,7 +14,7 @@ const Team = () => {
   return (
     <section id="team">
       <MainTitle title={teamContent.mainTitle} isDark isTop />
-      <FadeInBottom duration={0.7}>
+      <AnimateIn duration={0.7}>
         <div className="subtitle">
           <p className="subsubtitle">
             Ethicode was founded in 2020 around the side projects of its founder, Atli Sævar. Soon
@@ -23,7 +23,7 @@ const Team = () => {
           </p>
           <p className="subsubtitle">Here are some of us.</p>
         </div>
-      </FadeInBottom>
+      </AnimateIn>
       <div className="team">
         {teamContent.members.map((member, iM) => (
           <div
@@ -33,18 +33,18 @@ const Team = () => {
             })}
             onClick={() => setActiveMember(activeMember === iM ? undefined : iM)}
           >
-            <FadeInBottom duration={0.7} animation="rotateIn">
+            <AnimateIn duration={0.7} animation="rotateIn">
               <img src={member.img} alt={member.name} className="member-pic" />
-            </FadeInBottom>
-            <FadeInBottom duration={1}>
+            </AnimateIn>
+            <AnimateIn duration={1}>
               <div className="member-name">{member.name}</div>
               <div className="member-title">{member.title}</div>
-            </FadeInBottom>
+            </AnimateIn>
             {activeMember === iM && (
               <div className="socials">
                 {member.networks.map((network, iN) => (
                   <div key={iN} className="social">
-                    <FadeInBottom duration={0.7} animation="rotateIn" offset={0} delay={iN * 120}>
+                    <AnimateIn duration={0.7} animation="rotateIn" offset={0} delay={iN * 120}>
                       <SocialIcon
                         url={network}
                         target="_blank"
@@ -57,7 +57,7 @@ const Team = () => {
                         }
                         style={{ height: 40, width: 40 }}
                       />
-                    </FadeInBottom>
+                    </AnimateIn>
                   </div>
                 ))}
               </div>

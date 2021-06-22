@@ -1,10 +1,10 @@
 import theme from '../styles/theme';
-import FadeInBottom from './FadeInBottom';
+import AnimateIn from './AnimateIn';
 
 const MainTitle = ({ title, isDark, isTop }) => {
   return (
     <h2 className="main-title">
-      <FadeInBottom duration={1}>{title}</FadeInBottom>
+      <AnimateIn duration={1}>{title}</AnimateIn>
 
       <style jsx>{`
         .main-title {

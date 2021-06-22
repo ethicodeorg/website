@@ -1,7 +1,7 @@
 import Link from 'next/link';
 import { SocialIcon } from 'react-social-icons';
 import theme from '../styles/theme';
-import FadeInBottom from './FadeInBottom';
+import AnimateIn from './AnimateIn';
 import { useMediaQuery } from './utils/MediaQuery';
 
 const Content = ({ paragraph, isDark, isFooter, useSteps }) => {
@@ -11,18 +11,18 @@ const Content = ({ paragraph, isDark, isFooter, useSteps }) => {
     <div className="paragraph">
       {paragraph.title && (
         <h3 className={`paragraph-title paragraph-title-rotate${paragraph.titleRotate}`}>
-          <FadeInBottom duration={0.7} animation={paragraph.titleRotate ? 'rotateIn' : 'fadeInUp'}>
+          <AnimateIn duration={0.7} animation={paragraph.titleRotate ? 'rotateIn' : 'fadeInUp'}>
             {paragraph.title}
-          </FadeInBottom>
+          </AnimateIn>
         </h3>
       )}
       {paragraph.text && (
-        <FadeInBottom duration={0.7}>
+        <AnimateIn duration={0.7}>
           <p className="paragraph-text">{paragraph.text}</p>
-        </FadeInBottom>
+        </AnimateIn>
       )}
       {paragraph.image && (
-        <FadeInBottom duration={0.7}>
+        <AnimateIn duration={0.7}>
           <a className="paragraph-image-link" href={paragraph.image.link} target="_blank">
             <img
               src={isBreakpoint ? paragraph.image.mobileImg : paragraph.image.img}
@@ -30,54 +30,54 @@ const Content = ({ paragraph, isDark, isFooter, useSteps }) => {
               className="picture"
             />
           </a>
-        </FadeInBottom>
+        </AnimateIn>
       )}
       {paragraph.about && (
-        <FadeInBottom duration={0.5}>
+        <AnimateIn duration={0.5}>
           <p className="paragraph-about">{paragraph.about}</p>
-        </FadeInBottom>
+        </AnimateIn>
       )}
       {paragraph.smallText && (
-        <FadeInBottom duration={0.7}>
+        <AnimateIn duration={0.7}>
           <p className="paragraph-small-text">{paragraph.smallText}</p>
-        </FadeInBottom>
+        </AnimateIn>
       )}
       {paragraph.email && (
-        <FadeInBottom duration={0.7}>
+        <AnimateIn duration={0.7}>
           <a href={`mailto:${paragraph.email}`} className="paragraph-link">
             {paragraph.email}
           </a>
-        </FadeInBottom>
+        </AnimateIn>
       )}
       {paragraph.links && (
-        <FadeInBottom duration={0.7}>
+        <AnimateIn duration={0.7}>
           <a href={paragraph.links[0].url} className="paragraph-link" target="_blank">
             {paragraph.links[0].linkText}
           </a>
-        </FadeInBottom>
+        </AnimateIn>
       )}
       {paragraph.socials && (
         <div className="socials">
           {paragraph.socials.map((network, iN) => (
             <div key={iN} className="social">
-              <FadeInBottom duration={0.7} animation="rotateIn" delay={iN * 200}>
+              <AnimateIn duration={0.7} animation="rotateIn" delay={iN * 200}>
                 <SocialIcon
                   url={network}
                   target="_blank"
                   style={{ height: isBreakpoint ? 50 : 70, width: isBreakpoint ? 50 : 70 }}
                   bgColor={iN === 0 ? theme.colors.pink : ''}
                 />
-              </FadeInBottom>
+              </AnimateIn>
             </div>
           ))}
         </div>
       )}
       {paragraph.route && (
-        <FadeInBottom duration={0.7}>
+        <AnimateIn duration={0.7}>
           <Link href={paragraph.route.route}>
             <a className="paragraph-link">{paragraph.route.text}</a>
           </Link>
-        </FadeInBottom>
+        </AnimateIn>
       )}
 
       <style jsx scoped>{`
