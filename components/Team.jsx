@@ -21,11 +21,6 @@ const Team = () => {
             after, <span className="blue">passionate</span> volunteers joined the team who believed
             in the <span className="pink">mission</span>.
           </p>
-          <p className="subsubtitle">
-            We are currently in the process of expanding Ethicode's impact by taking on like-minded{' '}
-            <span className="yellow">clients</span> so that we can work full-time on the{' '}
-            <span className="pink">mission</span>, wheather it's on your projects or our own.
-          </p>
           <p className="subsubtitle">Here are some of us.</p>
         </div>
       </FadeInBottom>
@@ -78,13 +73,11 @@ const Team = () => {
           text-align: left;
         }
         .subtitle {
-          display: flex;
-          flex-wrap: wrap;
+          max-width: 700px;
           margin: 20px 0;
           font-size: 24px;
           font-style: italic;
           color: ${theme.colors.lightText};
-          text-align: right;
         }
         .subsubtitle {
           width: 100%;
@@ -154,13 +147,6 @@ const Team = () => {
         }
 
         @media screen and (min-width: 800px) {
-          .subsubtitle {
-            width: calc(50% - 50px);
-            padding-right: 50px;
-          }
-          .subsubtitle:nth-child(2n) {
-            padding-top: 50px;
-          }
           .team {
             width: calc(100% + 50px);
             margin: 0 -25px;
