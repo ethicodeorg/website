@@ -29,7 +29,7 @@ const InnovationFront = () => {
             reduce <span className="accent yellow"> environmental </span>footprints, and elevate
           </div>
           <div>
-            physical and mental <span className="accent blue"> wellbeing </span>.
+            <span className="accent blue"> wellbeing</span>.
           </div>
         </h4>
       </div>
