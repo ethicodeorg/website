@@ -1,30 +1,31 @@
 import theme from '../styles/theme';
-import FadeInBottom from './FadeInBottom';
+import AnimateIn from './AnimateIn';
+import MainTitle from './MainTitle';
 
 const Ethicode = () => {
   return (
     <div className="vision">
-      <FadeInBottom duration={1}>
+      <MainTitle title="Our vision" isDark isTop />
+      <AnimateIn duration={1}>
         <h2 className="visionContent pink">For a world</h2>
-      </FadeInBottom>
-      <FadeInBottom duration={1}>
+      </AnimateIn>
+      <AnimateIn duration={1}>
         <h3 className="visionContent">
           where all
           <span className="yellow"> sentient beings</span>
         </h3>
-      </FadeInBottom>
-      <FadeInBottom duration={1.5}>
+      </AnimateIn>
+      <AnimateIn duration={1.5}>
         <h4>
           have the right to
           <span className="blue"> life</span>, <span className="blue">liberty</span>, and the
           <span className="blue"> pursuit of happiness</span>.
         </h4>
-      </FadeInBottom>
+      </AnimateIn>
 
       <style jsx scoped>{`
         .vision {
-          height: 100vh;
-          padding: 0 20px;
+          padding: 0 0 100px;
         }
         .visionContent {
           font-style: italic;
@@ -32,7 +33,7 @@ const Ethicode = () => {
           text-align: left;
         }
         h2 {
-          padding-top: 33vh;
+          padding-top: 100px;
         }
         h2,
         h3 {
@@ -88,7 +89,7 @@ const Ethicode = () => {
 
         @media screen and (min-width: 800px) {
           .vision {
-            padding: 0 45px;
+            padding: 0 45px 200px;
           }
           h2 {
             font-size: 112px;
@@ -106,8 +107,8 @@ const Ethicode = () => {
 
         @media screen and (min-width: 1200px) {
           h2 {
-            font-size: 172px;
-            line-height: 156px;
+            font-size: 130px;
+            line-height: 120px;
           }
           h3 {
             font-size: 80px;

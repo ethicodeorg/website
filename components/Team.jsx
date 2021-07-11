@@ -1,9 +1,10 @@
+import Link from 'next/link';
 import React, { useState } from 'react';
 import classNames from 'classnames';
 import { SocialIcon } from 'react-social-icons';
 import content from '../public/content.json';
 import theme from '../styles/theme';
-import FadeInBottom from './FadeInBottom';
+import AnimateIn from './AnimateIn';
 import MainTitle from './MainTitle';
 
 const Team = () => {
@@ -12,15 +13,17 @@ const Team = () => {
 
   return (
     <section id="team">
-      <MainTitle title={teamContent.mainTitle} isDark />
-      <FadeInBottom duration={0.7}>
+      <MainTitle title={teamContent.mainTitle} isDark isTop />
+      <AnimateIn duration={0.7}>
         <div className="subtitle">
-          Ethicode is a team of <span className="passion">passionate volunteers</span> who share a{' '}
-          <span className="vision">common vision</span> of a{' '}
-          <span className="compassion">more compassionate</span> future.
-          <div className="subsubtitle">Here are some of us.</div>
+          <p className="subsubtitle">
+            Ethicode was founded in 2020 around the side projects of its founder, Atli Sævar. Soon
+            after, <span className="blue">passionate</span> volunteers joined the team who believe
+            in the <span className="pink">mission</span>.
+          </p>
+          <p className="subsubtitle">Here are some of us.</p>
         </div>
-      </FadeInBottom>
+      </AnimateIn>
       <div className="team">
         {teamContent.members.map((member, iM) => (
           <div
@@ -30,31 +33,25 @@ const Team = () => {
             })}
             onClick={() => setActiveMember(activeMember === iM ? undefined : iM)}
           >
-            <FadeInBottom duration={0.7} animation="rotateIn">
+            <AnimateIn duration={0.7} animation="rotateIn">
               <img src={member.img} alt={member.name} className="member-pic" />
-            </FadeInBottom>
-            <FadeInBottom duration={1}>
+            </AnimateIn>
+            <AnimateIn duration={1}>
               <div className="member-name">{member.name}</div>
               <div className="member-title">{member.title}</div>
-            </FadeInBottom>
+            </AnimateIn>
             {activeMember === iM && (
               <div className="socials">
                 {member.networks.map((network, iN) => (
                   <div key={iN} className="social">
-                    <FadeInBottom duration={0.7} animation="rotateIn" offset={0} delay={iN * 120}>
+                    <AnimateIn duration={0.7} animation="rotateIn" offset={0} delay={iN * 120}>
                       <SocialIcon
                         url={network}
                         target="_blank"
-                        bgColor={
-                          network.includes('mailto') ||
-                          network.includes('carlosmarquezperez.com') ||
-                          network.includes('laurabrown.uk')
-                            ? theme.colors.pink
-                            : ''
-                        }
+                        bgColor={network.includes('mailto') ? theme.colors.pink : ''}
                         style={{ height: 40, width: 40 }}
                       />
-                    </FadeInBottom>
+                    </AnimateIn>
                   </div>
                 ))}
               </div>
@@ -70,22 +67,23 @@ const Team = () => {
           text-align: left;
         }
         .subtitle {
-          max-width: 1200px;
-          margin: 20px auto;
+          max-width: 700px;
+          margin: 20px 0;
           font-size: 24px;
           font-style: italic;
           color: ${theme.colors.lightText};
         }
         .subsubtitle {
-          margin-top: 10px;
+          width: 100%;
+          text-align: left;
         }
-        .passion {
+        .pink {
           color: ${theme.colors.pink};
         }
-        .vision {
+        .yellow {
           color: ${theme.colors.yellow};
         }
-        .compassion {
+        .blue {
           color: ${theme.colors.blue};
         }
         .team {
@@ -136,6 +134,10 @@ const Team = () => {
         }
         .social:hover {
           transform: scale(1.1);
+        }
+        .link {
+          text-decoration: none;
+          color: ${theme.colors.blue};
         }
 
         @media screen and (min-width: 800px) {

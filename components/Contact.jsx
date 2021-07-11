@@ -2,15 +2,15 @@ import content from '../public/content.json';
 import MainTitle from './MainTitle';
 import Content from './Content';
 
-const Contact = () => {
+const Contact = ({ isTop }) => {
   const contactContent = content.Contact;
   return (
     <section id="contact">
-      <MainTitle title={contactContent.mainTitle} />
+      <MainTitle title={contactContent.mainTitle} isTop={isTop} isDark />
 
       <div className="contact">
         {contactContent.paragraphs.map((paragraph, iP) => (
-          <Content key={iP} paragraph={paragraph} />
+          <Content key={iP} paragraph={paragraph} isDark isFooter useSteps />
         ))}
       </div>
 
