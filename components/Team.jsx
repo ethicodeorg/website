@@ -18,7 +18,7 @@ const Team = () => {
         <div className="subtitle">
           <p className="subsubtitle">
             Ethicode was founded in 2020 around the side projects of its founder, Atli Sævar. Soon
-            after, <span className="blue">passionate</span> volunteers joined the team who believed
+            after, <span className="blue">passionate</span> volunteers joined the team who believe
             in the <span className="pink">mission</span>.
           </p>
           <p className="subsubtitle">Here are some of us.</p>
@@ -48,13 +48,7 @@ const Team = () => {
                       <SocialIcon
                         url={network}
                         target="_blank"
-                        bgColor={
-                          network.includes('mailto') ||
-                          network.includes('carlosmarquezperez.com') ||
-                          network.includes('laurabrown.uk')
-                            ? theme.colors.pink
-                            : ''
-                        }
+                        bgColor={network.includes('mailto') ? theme.colors.pink : ''}
                         style={{ height: 40, width: 40 }}
                       />
                     </AnimateIn>
