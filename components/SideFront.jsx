@@ -39,7 +39,7 @@ const SideFront = ({ title, isStudio, isInnovation }) => {
         .side-front {
           height: 500px;
           padding: 33vh 20px 0;
-          background-color: ${theme.colors.lightText};
+          background-color: rgba(255, 255, 255, 0.5);
         }
         .eyeball {
           z-index: -1;
@@ -112,7 +112,7 @@ const SideFront = ({ title, isStudio, isInnovation }) => {
           animation: mouseslide 1.5s forwards;
         }
         .mouse {
-          color: ${theme.colors.lightGray};
+          color: ${theme.colors.white};
         }
         .arrows {
           font-size: 16px;
@@ -123,8 +123,8 @@ const SideFront = ({ title, isStudio, isInnovation }) => {
           height: 10px;
           display: flex;
           justify-content: center;
-          -webkit-animation: arrowappear 5s forwards infinite;
-          animation: arrowappear 5s forwards infinite;
+          -webkit-animation: arrowappear 3s forwards infinite;
+          animation: arrowappear 3s forwards infinite;
         }
         .arrow2 {
           animation-delay: 0.1.5s;

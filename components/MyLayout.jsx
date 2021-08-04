@@ -1,5 +1,5 @@
 import Head from 'next/head';
-import {useEffect, React} from 'react';
+import { useEffect, React } from 'react';
 import Header from '../components/Header';
 import theme from '../styles/theme';
 import { initGA, logPageView } from './utils/analytics';
@@ -12,7 +12,7 @@ export default function Layout({ children, title = 'Ethicode' }) {
     }
     logPageView();
   });
-  
+
   return (
     <div>
       <Head>
@@ -44,7 +44,6 @@ export default function Layout({ children, title = 'Ethicode' }) {
               font-family: ${theme.fontFamily.default};
               -webkit-font-smoothing: antialiased;
               -moz-osx-font-smoothing: grayscale;
-              background-color: ${theme.colors.darkBackground};
             }
           `}
         </style>
