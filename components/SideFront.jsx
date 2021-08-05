@@ -94,9 +94,9 @@ const SideFront = ({ title, isStudio, isInnovation }) => {
           z-index: 2;
         }
         h4 {
-          margin: 200px 0 0;
+          margin: 200px 0 0 -25px;
           padding: 10px;
-          width: calc(100vw - 70px);
+          width: calc(100vw - 20px);
           background-color: rgba(255, 255, 255, 0.5);
           color: ${theme.colors.text};
           font-size: 14px;
