@@ -94,8 +94,10 @@ const SideFront = ({ title, isStudio, isInnovation }) => {
           z-index: 2;
         }
         h4 {
-          margin: 0 auto;
-          padding-top: 200px;
+          margin: 200px 0 0;
+          padding: 10px;
+          width: calc(100vw - 70px);
+          background-color: rgba(255, 255, 255, 0.5);
           color: ${theme.colors.text};
           font-size: 14px;
           text-align: left;
@@ -142,8 +144,11 @@ const SideFront = ({ title, isStudio, isInnovation }) => {
             font-size: 36px;
           }
           h4 {
-            padding-top: 20px;
+            width: unset;
+            margin: 0 auto;
+            padding: 20px 0 0;
             color: ${theme.colors.lightText};
+            background-color: transparent;
             font-size: 16px;
           }
           .bigball,
