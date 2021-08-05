@@ -43,7 +43,7 @@
       {
         "title": "Who",
         "titleRotate": "120",
-        "text": "We are a team of inspired individuals working on new and effective ways to advocate for human and non-human animal rights.",
+        "text": "We are a team of passionate individuals working on new and effective ways to advocate for exploited animals.",
         "route": {
           "text": "Meet the team",
           "route": "/team"
@@ -52,7 +52,7 @@
       {
         "title": "What we love",
         "titleRotate": "200",
-        "text": "We love getting down to the thick of it to have a meaningful impact and get cracking. We love communicating with the truth because life is short, and we don't want to spend any of it on bullshit."
+        "text": "We love getting down to have a meaningful impact and get cracking. We love communicating with the truth because life is short, and we don't want to spend any of it on nonsense."
       }
     ]
   },
@@ -66,8 +66,8 @@
       {},
       {
         "image": {
-          "img": "food.e.png",
-          "mobileImg": "mobile-food.e.png",
+          "img": "foode-desktop.png",
+          "mobileImg": "foode-mobile.png",
           "name": "food·e",
           "link": "https://foodprintcalculator.com/"
         }
@@ -94,8 +94,8 @@
       },
       {
         "image": {
-          "img": "veganbotpic.png",
-          "mobileImg": "mobile-veganbotpic.png",
+          "img": "veganbot-desktop.png",
+          "mobileImg": "veganbot-mobile.png",
           "name": "veganbot",
           "link": "http://veganbot.com"
         }

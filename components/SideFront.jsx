@@ -39,7 +39,7 @@ const SideFront = ({ title, isStudio, isInnovation }) => {
         .side-front {
           height: 500px;
           padding: 33vh 20px 0;
-          background-color: ${theme.colors.lightText};
+          background-color: rgba(255, 255, 255, 0.5);
         }
         .eyeball {
           z-index: -1;
@@ -94,8 +94,10 @@ const SideFront = ({ title, isStudio, isInnovation }) => {
           z-index: 2;
         }
         h4 {
-          margin: 0 auto;
-          padding-top: 200px;
+          margin: 200px 0 0 -25px;
+          padding: 10px;
+          width: calc(100vw - 20px);
+          background-color: rgba(255, 255, 255, 0.5);
           color: ${theme.colors.text};
           font-size: 14px;
           text-align: left;
@@ -112,7 +114,7 @@ const SideFront = ({ title, isStudio, isInnovation }) => {
           animation: mouseslide 1.5s forwards;
         }
         .mouse {
-          color: ${theme.colors.lightGray};
+          color: ${theme.colors.white};
         }
         .arrows {
           font-size: 16px;
@@ -123,8 +125,8 @@ const SideFront = ({ title, isStudio, isInnovation }) => {
           height: 10px;
           display: flex;
           justify-content: center;
-          -webkit-animation: arrowappear 5s forwards infinite;
-          animation: arrowappear 5s forwards infinite;
+          -webkit-animation: arrowappear 3s forwards infinite;
+          animation: arrowappear 3s forwards infinite;
         }
         .arrow2 {
           animation-delay: 0.1.5s;
@@ -142,8 +144,11 @@ const SideFront = ({ title, isStudio, isInnovation }) => {
             font-size: 36px;
           }
           h4 {
-            padding-top: 20px;
+            width: unset;
+            margin: 0 auto;
+            padding: 20px 0 0;
             color: ${theme.colors.lightText};
+            background-color: transparent;
             font-size: 16px;
           }
           .bigball,
