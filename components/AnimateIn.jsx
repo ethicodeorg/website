@@ -5,6 +5,7 @@ const AnimateIn = ({ children, duration, animation = 'fadeInUp', offset = 100, d
     <ScrollAnimation
       animateIn={animation}
       animatePreScroll={true}
+      animateOnce={true}
       duration={duration}
       offset={offset}
       delay={delay}
